@@ -7,7 +7,8 @@
         2018: 'data/2018/0/0/gender.csv'
     }, '#gender');
     createChart('column', {
-        2017: 'data/2017/0/0/race.csv'
+        2017: 'data/2017/0/0/race.csv',
+        2018: 'data/2018/0/0/race.csv'
     }, '#race');
     createChart('pie', {
         2017: 'data/2017/0/0/sexual_orientation.csv',
