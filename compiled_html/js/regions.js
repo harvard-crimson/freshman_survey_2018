@@ -30,8 +30,8 @@ window.onload = function () {
     path_outside.attr({fill: '#D3D3D3',stroke: '#FFFFFF',"stroke-miterlimit": '10','stroke-width': '0','stroke-opacity': '1'}).data('id', 'circle_a');
 
     us.west = path_ac;
-    us.southwest = path_z;
-    us.midwest = path_ab;
+    us.southwest = path_ab;
+    us.midwest = path_z;
     us.northeast = path_l;
     us.southeast = path_v;
     us.outside = path_outside;
