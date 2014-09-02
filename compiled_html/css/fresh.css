@@ -363,7 +363,7 @@ hr {
 }
 
 .full-width {
-	max-width: 100%;
+	width: 100%;
 }
 
 /* Layout */
