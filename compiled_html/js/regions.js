@@ -68,7 +68,7 @@ window.onload = function () {
             return;
         }
         else {
-            $('.year-switch-option').removeClass('selected');
+            $('#regions-inner .year-switch-option').removeClass('selected');
             $(this).addClass('selected');
             if (current)
                 $("#"+current+year).hide();

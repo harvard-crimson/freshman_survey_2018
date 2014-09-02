@@ -19,7 +19,8 @@
         2018: 'data/2018/0/0/birth_order.csv'
     }, '#birth-order');
     createChart('pie', {
-        2017: 'data/2017/0/0/school_type.csv'
+        2017: 'data/2017/0/0/school_type.csv',
+        2018: 'data/2018/0/0/school_type.csv'
     }, '#school-type');
     createChart('pie', {
         2017: 'data/2017/0/0/athletes_raw.csv',
