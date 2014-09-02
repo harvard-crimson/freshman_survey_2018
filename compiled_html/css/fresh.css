@@ -114,27 +114,27 @@ header h1 {
 }
 
 #makeup1 {
-	background-image: url('../img/makeup1.jpeg');
+	background-image: url('../img/makeup_left.jpeg');
 }
 
 #makeup2 {
-	background-image: url('../img/makeup2.jpeg');
+	background-image: url('../img/makeup_right.jpeg');
 }
 
 #admissions1 {
-	background-image: url('../img/admissions1.jpeg');
+	background-image: url('../img/admissions_left_grey.jpeg');
 }
 
 #admissions2 {
-	background-image: url('../img/admissions2.jpeg');
+	background-image: url('../img/admissions_right_grey.jpeg');
 }
 
 #ac1 {
-	background-image: url('../img/ac1.jpeg');
+	background-image: url('../img/academics_left_grey.jpg');
 }
 
 #ac2 {
-	background-image: url('../img/ac2.jpeg');
+	background-image: url('../img/academics_right_grey.jpg');
 }
 
 #sex1 {
