@@ -28,6 +28,18 @@
     createChart('column', {
         2018: 'data/2018/0/0/athletes-family-income.csv'
     }, '#athletes-vs-income');
+    createChart('column', {
+        2018: 'data/2018/0/0/community-legacy-bar.csv'
+    }, '#legacy-community');
+    createChart('column', {
+        2018: 'data/2018/0/0/family-income-legacy-bar.csv'
+    }, '#legacy-income');
+    createChart('column', {
+        2018: 'data/2018/0/0/legacy-bar.csv'
+    }, '#legacy');
+    createChart('column', {
+        2018: 'data/2018/0/0/secondary-school-legacy-bar.csv'
+    }, '#legacy-secondary-school');
 
     // Geography
     createChart('pie', {
