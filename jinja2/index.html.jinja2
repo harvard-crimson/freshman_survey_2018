@@ -1,0 +1,43 @@
+{% extends 'jinja2/_base.html.jinja2' %}
+
+{% block js %}
+	<script src="js/jquery-animate-shadow.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/landing.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+
+{% block extra_content %}
+<div class="landingcontainer">
+	<div class="intro landing">
+	    <p>Scroll through the graphs and charts on the following data pages for a visual representation of the Class of 2017. The data was collected in an email survey conducted by The Crimson during the month of August. Nearly 80 percent of the class responded, though not all of them finished the survey. The Crimson did not adjust the data for any possible self-selection bias.</p>
+	</div>
+
+	<div class="landing">
+		<div class="section-container">
+			<div class="survey-section">
+				<div class="subhead">Makeup of the Class</div>
+				<div class="card" id="makeup1" data-destination="makeup.html"><div class="cover"></div><div class="text"><span>Data</span></div></div>
+				<div class="card" id="makeup2" data-destination="http://www.thecrimson.com/article/2013/9/3/freshmen-employment-demographics-geography"><div class="cover"></div><div class="text"><span>Narrative</span></div></div>
+			</div>
+			<div class="survey-section">
+				<div class="subhead">Admissions</div>
+				<div class="card" id="admissions1" data-destination="admissions.html"><div class="cover"></div><div class="text"><span>Data</span></div></div>
+				<div class="card" id="admissions2" data-destination="http://www.thecrimson.com/article/2013/9/4/freshman-survey-admissions-aid/"><div class="cover"></div><div class="text"><span>Narrative</span></div></div>
+			</div>
+		</div>
+		<div class="section-container">
+			<div class="survey-section">
+				<div class="subhead">Academics</div>
+				<div class="card" id="ac1" data-destination="academics.html"><div class="cover"></div><div class="text"><span>Data</span></div></div>
+				<div class="card" id="ac2" data-destination="http://www.thecrimson.com/article/2013/9/5/freshman-survey-academics-extracurriculars/"><div class="cover"></div><div class="text"><span>Narrative</span></div></div>
+			</div>
+			<div class="survey-section">
+				<div class="subhead">Lifestyle</div>
+				<div class="card" id="sex1" data-destination="lifestyle.html"><div class="cover"></div><div class="text"><span>Data</span></div></div>
+				<div class="card" id="sex2" data-destination="http://www.thecrimson.com/article/2013/9/6/freshman-survey-part-iv/"><div class="cover"></div><div class="text"><span>Narrative</span></div></div>
+			</div>
+		</div>
+	</div>
+	<div style="clear: both"></div>
+</div>
+{% endblock %}

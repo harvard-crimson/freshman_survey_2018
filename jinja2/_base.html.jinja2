@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>The Harvard Crimson | Class of 2017</title>
+
+		<link href="http://fonts.googleapis.com/css?family=Lato:400,700|Crimson|Colaborate" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/fresh.css">
+		<link rel="stylesheet" type="text/css" href="css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="css/nv.d3.css">
+
+		<script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=thecrimson" type="text/javascript"></script>
+		<script src="js/jquery-csv.min.js"></script>
+		<script src="js/jquery.affix.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.tabs.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="js/highcharts.js"></script>
+		<script src="js/highcharts-more.js"></script>
+		<script src="js/tracking.js"></script>
+		<script src="js/raphael.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/regions.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/debounce.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/d3.v3.js"></script>
+		<script src="js/fisheye.js"></script>
+		<script src="js/nv.d3.min.js"></script>
+		<script src="js/utils.js"></script>
+		<script src="js/legend.js"></script>
+		<script src="js/scatter.js"></script>
+
+		{% block js %}{% endblock %}
+	</head>
+
+	<body>
+		<header>
+			<div class="wrapper">
+				<a class="header-logo" href="http://www.thecrimson.com/">
+					<img src="img/logo.png" height="18" width="215" />
+				</a>
+				<ul class="header-nav">
+					<a href="index.html"><li{% if filename=='index.html' %} class="active"{% endif %}>Introduction</li></a>
+                    <a href="makeup.html"><li{% if filename=='makeup.html' %} class="active"{% endif %}>Makeup of the Class</li></a>
+                    <a href="admissions.html"><li{% if filename=='admissions.html' %} class="active"{% endif %}>Admissions</li></a>
+                    <a href="academics.html"><li{% if filename=='academics.html' %} class="active"{% endif %}>Academics/Extracurriculars</li></a>
+                    <a href="lifestyle.html"><li{% if filename=='lifestyle.html' %} class="active"{% endif %}>Beliefs/Lifestyle</li></a>
+				</ul>
+			</div>
+		</header>
+
+		<img class="full-width" src='img/cover.jpg'>
+
+		<div class="wrapper">
+			<div id="subnav">
+				<ul>
+                    {% block nav_items %}{% endblock %}
+				</ul>
+			</div>
+			<div id="main">
+                {% block content %}{% endblock %}
+			</div>
+
+			{% block extra_content %}{% endblock %}
+
+		    <div id="TheCrimson_AllArticles_BTF_728x90" class="leaderboard ad">
+		        <script type='text/javascript'>
+		            if ($(window).width >= 728) {
+		                googletag.cmd.push(function() { googletag.display('TheCrimson_AllArticles_BTF_728x90'); });
+		            }
+		        </script>
+		    </div>
+		</div>
+	</body>
+</html>

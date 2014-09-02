@@ -1,0 +1,220 @@
+{% extends 'jinja2/_base.html.jinja2' %}
+
+{% block js %}
+    <script src="js/regions.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/charts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/academics.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+{% block nav_items %}
+    <li>Cheating</li>
+    <li>In High School</li>
+    <li>At Harvard</li>
+    <li>Athletics</li>
+{% endblock %}
+
+{% block content %}
+    <div class="intro scroll-row">
+        <div id="subhead">Academics and Extracurriculars</div>
+        <p>Part III of The Crimson&#39;s survey of the Class of 2017 looks at incoming freshmen&#39;s academic and extracurricular lives&mdash;and how they prioritize the two. The survey of more than 1,300 members of the freshman class sheds light on what these students did in high school and what they plan to do in college. Some of them admitted to cheating, others said they have been concussed, and nearly all of them say they expect to make academics their top priority at Harvard. This and other data on their experiences and plans in the classroom, in clubs, and on the playing field reveals a group defined by both their similarities and their differences.</p>
+        <p>Read Part III of The Crimson's four-part series on the freshman survey <a href="http://www.thecrimson.com/article/2013/9/5/freshman-survey-academics-extracurriculars/">here</a>.</p>
+    </div>
+
+    <div class="scroll-row">
+        <h1>Cheating</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#exam-cheaters-tab" data-toggle="tab">Exams</a>
+            </li>
+            <li>
+                <a href="#paper-cheaters-tab" data-toggle="tab">Papers</a>
+            </li>
+            <li>
+                <a href="#homework-cheaters-tab" data-toggle="tab">Cheating on Homework or Problem Sets</a>
+            </li>
+            <li>
+                <a href="#cheating-school-type-tab" data-toggle="tab">Cheating by School Type</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="exam-cheaters-tab" class="active">
+                <h2>Cheating on an Exam</h2>
+                <div id="exam-cheaters" class="graph"></div>
+                <p>Ten percent of freshman respondents admitted to cheating on an exam before coming to Harvard. In comparison, 7 percent of graduating Harvard seniors surveyed by The Crimson last spring admitted to cheating on that type of assignment during their undergraduate careers.</p>
+            </li>
+            <li id="paper-cheaters-tab">
+                <h2>Cheating on a Paper or Take-Home Assignment</h2>
+                <div id="paper-cheaters" class="graph"></div>
+                <p>Seventeen percent of freshman respondents said they had cheated on a paper or take-home assignment before coming to Harvard. In comparison, 7 percent of graduating Harvard seniors surveyed by The Crimson last spring admitted to cheating on that type of assignment during their undergraduate careers.</p>
+            </li>
+            <li id="homework-cheaters-tab">
+                <h2>Homework or Problem Sets</h2>
+                <div id="homework-cheaters" class="graph"></div>
+                <p>A higher percentage of freshman respondents admitted to cheating on a homework assignment or problem set than on either an exam or paper or take-home assignment before coming to Harvard. In comparison, 32 percent of graduating Harvard seniors surveyed by The Crimson last spring admitted to cheating on that type of assignment during their undergraduate careers.</p>
+            </li>
+            <li id="cheating-school-type-tab">
+                <h2>Cheating by Type of High School</h2>
+                <div id="cheating-school-type" class="graph"></div>
+                <p>Freshmen who attended public school were more likely to admit to several forms of cheating than those who attended private school. Thirteen percent of respondents who attended public school admitted to cheating on an exam, compared to 7 percent of surveyed freshmen who attended private school. One fifth of respondents who went to private school said they cheated on a paper or take-home assignment, compared to 12 percent of respondents who attended private school.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="scroll-row">
+        <h1>In High School</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#study-habits-past-tab" data-toggle="tab">Study Hours</a>
+            </li>
+            <li>
+                <a href="#math-level-tab" data-toggle="tab">Level of Math</a>
+            </li>
+            <li>
+                <a href="#extracurriculars-tab" data-toggle="tab">Extracurriculars</a>
+            </li>
+            <li>
+                <a href="#leadership-tab" data-toggle="tab">Leadership</a>
+            </li>
+            <li>
+                <a href="#government-tab" data-toggle="tab">Student Government</a>
+            </li>
+            <li>
+                <a href="#math-school-type-tab" data-toggle="tab">Math by School Type</a>
+            </li>
+            <li>
+                <a href="#study-hours-school-type-tab" data-toggle="tab">Study Hours by School Type</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="study-habits-past-tab" class="active">
+                <h2>Study Hours</h2>
+                <div id="study-habits-past" class="graph"></div>
+                <p>Respondents from public schools were twice as likely as their private-school peers to report that they studied for 10 or fewer hours a week in high school.</p>
+            </li>
+            <li id="math-level-tab">
+                <h2>Level of Math</h2>
+                <div id="math-level" class="graph"></div>
+                <p>Forty-two percent of respondents had taken up to BC Calculus, and 32 percent up to AB Calculus. At the College, incoming freshmen are given suggestions for which math level to take based both on an online placement exam and the highest level of math they took in high school.</p>
+            </li>
+            <li id="extracurriculars-tab">
+                <h2>High School Extracurriculars</h2>
+                <div id="extracurriculars" class="graph"></div>
+                <p>The five most commonly reported high school extracurriculars were, in descending order, community service, athletics, music clubs or bands, student government, and math clubs or competitions.</p>
+            </li>
+            <li id="leadership-tab">
+                <h2>High School Extracurricular Leadership</h2>
+                <div id="leadership" class="graph"></div>
+                <p>More students were the president or top leader of zero clubs in high school than six or more. At Harvard, a College survey found last spring that more than half of student organizations have leadership that is skewed toward a single gender.</p>
+            </li>
+            <li id="government-tab">
+                <h2>Belief in Power of Student Government</h2>
+                <div id="government" class="graph"></div>
+                <p>The survey found that a majority of respondents believe that student government has the power to effect change. Seventy-nine percent of respondents who had been involved in student government in high school expressed faith in the ability of student government to effect change, compared to 60 percent of students who were not involved in student government.</p>
+            </li>
+            <li id="math-school-type-tab">
+                <h2>Level of Math by Type of High School</h2>
+                <div id="math-school-type" class="graph"></div>
+                <p>A plurality of students from public high schools have taken up to BC Calculus. Four percent of all respondents had taken a math level past multivariable calculus/linear algebra; of that 4 percent, 58 percent attended public, non-charter school and 24 percent a non-denominational private school.</p>
+            </li>
+            <li id="study-hours-school-type-tab">
+                <h2>High School Study Hours by School Type</h2>
+                <div id="study-hours-school-type" class="graph"></div>
+                <p>Thirty-nine percent of respondents from public, non-charter schools said they studied for 10 or fewer hours a week, compared to only 17 percent of students from private, non-denominational schools. Of those who studied 10 or fewer hours a week in high school, a majority&mdash;73 percent&mdash;went to a public non-charter school.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="TheCrimson_AllArticles_ATF_300x250" class="box ad">
+        <script type='text/javascript'>
+            googletag.cmd.push(function() { googletag.display('TheCrimson_AllArticles_ATF_300x250'); });
+        </script>
+    </div>
+
+    <div class="scroll-row">
+        <h1>At Harvard</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#study-habits-future-tab" data-toggle="tab">Study Hours</a>
+            </li>
+            <li>
+                <a href="#priorities-raw-tab" data-toggle="tab">Priorities</a>
+            </li>
+            <li>
+                <a href="#concentration-raw-tab" data-toggle="tab">Concentrations</a>
+            </li>
+            <li>
+                <a href="#secondary-tab" data-toggle="tab">Secondary/Citation</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="study-habits-future-tab" class="active">
+                <h2>Anticipated College Study Hours</h2>
+                <div id="study-habits-future" class="graph"></div>
+                <p>A plurality of respondents indicated that they anticipate studying for between 20 and 29 hours a week in college, and more respondents expect to study 50 or more than 10 or fewer. In contrast, a plurality said they spent fewer than 10 hours a week studying in high school.</p>
+            </li>
+            <li id="priorities-raw-tab">
+                <h2>Anticipated College Priorities</h2>
+                <div id="priorities-raw" class="graph"></div>
+                <p>When asked to rank their anticipated college priorities among academics, extracurriculars, paid employment, varsity sports, and social life, the vast majority of respondents ranked academics as their top priority. A plurality of respondents named extracurriculars as their second priority.</p>
+            </li>
+            <li id="secondary-tab">
+                <h2>Anticipated Secondaries and Language Citations</h2>
+                <div id="secondary" class="graph"></div>
+                <p>Twenty-three percent of respondents intend to pursue both a secondary and a language citation at Harvard, and 28 percent plan to pursue neither.</p>
+            </li>
+            <li id="concentration-raw-tab">
+                <h2>Anticipated Concentrations</h2>
+                <div id="concentration-raw" class="graph"></div>
+                <p>Just 11 percent of respondents said they plan to pursue a concentration in the arts and humanities division. Sixteen percent of current College students concentrate in the arts and humanities. In recent months, a faculty committee at Harvard and op-ed columnists across the country have sought solutions for the decline of humanistic study in academia.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="TheCrimson_AllArticles_BTF_300x250" class="box ad">
+        <script type='text/javascript'>
+            googletag.cmd.push(function() { googletag.display('TheCrimson_AllArticles_BTF_300x250'); });
+        </script>
+    </div>
+
+    <div class="scroll-row">
+        <h1>Athletics</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#athletes-raw-tab" data-toggle="tab">Numbers</a>
+            </li>
+            <li>
+                <a href="#attrition-athletics-tab" data-toggle="tab">Attrition</a>
+            </li>
+            <li>
+                <a href="#concussions-tab" data-toggle="tab">Concussions Numbers</a>
+            </li>
+            <li>
+                <a href="#concussions-view-tab" data-toggle="tab">Attitudes Regarding Concussions</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="athletes-raw-tab" class="active">
+                <h2>Athletes at Harvard</h2>
+                <div id="athletes-raw"></div>
+                <p>Twelve percent of incoming freshmen said they were recruited to the College to play a varsity sport, and an additional 8 percent said they plan to walk on to a team. More than a quarter of those prospective walk-ons said they plan to join one of Harvard’s four crew teams. Roughly 20 percent of current Harvard students are members of a varsity athletics team.</p>
+            </li>
+            <li id="attrition-athletics-tab">
+                <h2>Likelihood of Playing All Four Years</h2>
+                <div id="attrition-athletics" class="graph"></div>
+                <p>Harvard does not release numbers on the rate of varsity athletes that play all four years. However, surveyed freshmen anticipated playing for their entire college career at different rates depending on their status as an official recruit or a walk-on, with 93 percent of recruits intending to play all four years but just 47 percent of walk-ons planning to do the same.</p>
+            </li>
+            <li id="concussions-tab">
+                <h2>Athletics and Concussions</h2>
+                <div id="concussions" class="graph"></div>
+                <p>Seventy-eight percent of incoming recruited and walk-on athletes have never been concussed. According to Dr. Francis Wang, the head team physician for Harvard Athletics, roughly 55 Harvard athletes incurred a concussion during the 2011-12 season.</p>
+            </li>
+            <li id="concussions-view-tab">
+                <h2>Effect of Concussions on Attitude Towards Sport</h2>
+                <div id="concussions-view" class="graph"></div>
+                <p>Some incoming recruited and walk-on athletes reported that concussions have affected the way they feel about their sport. Of those who had been concussed, 19 percent reported that concussions had changed their approach or desire to play that sport, compared to 5 percent of incoming athletes overall. Repeated concussions have been linked to chronic traumatic encephalopathy, or CTE, a progressive degenerative brain disease.</p>
+            </li>
+        </ul>
+    </div>
+
+{% endblock %}

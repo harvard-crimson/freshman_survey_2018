@@ -1,0 +1,470 @@
+{% extends 'jinja2/_base.html.jinja2' %}
+
+{% block js %}
+    <script src="js/regions.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/charts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lifestyle.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+{% block nav_items %}
+    <li>Religion</li>
+    <li>Politics</li>
+    <li>Sex</li>
+    <li>Drugs</li>
+    <li>Mental Health</li>
+    <li>Technology</li>
+{% endblock %}
+
+{% block content %}
+    <div class="intro scroll-row">
+        <div id="subhead">Beliefs and Lifestyle</div>
+        <p>From religion and politics, to drugs and alcohol, to mental health and technology, it is clear that the newest members of the Harvard community have much in common and plenty to disagree about. Part IV of The Crimson&#39;s freshmen survey takes a broad look at just what the members of the Class of 2017 do and believe.  Most of those surveyed are virgins, most consider themselves liberal, and most have an iPhone in their pocket, but a closer look at the more than 1,300 respondents&mdash;nearly 80 percent of the class&mdash;reveals a world of difference in the way freshmen lead their lives.</p>
+        <p>Read Part IV of The Crimson's four-part series on the freshman survey <a href="http://www.thecrimson.com/article/2013/9/6/freshman-survey-part-iv/">here</a>.</p>
+
+    </div>
+
+    <div class="scroll-row">
+        <h1>Religion</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#religion-tab" data-toggle="tab">Religion</a>
+            </li>
+            <li>
+                <a href="#religiosity-tab" data-toggle="tab">Religiosity</a>
+            </li>
+            <li>
+                <a href="#religion-region-tab" data-toggle="tab">Religion by Region</a>
+            </li>
+            <li>
+                <a href="#religion-income-tab" data-toggle="tab">Religiosity by Income</a>
+            </li>
+            <li>
+                <a href="#religion-race-tab" data-toggle="tab">Ethnicity by Religion</a>
+            </li>
+            <li>
+                <a href="#religion-religion-tab" data-toggle="tab">Religiosity by Religion</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="religion-tab" class="active">
+                <h2>Religion</h2>
+                <div id="religion" class="graph"></div>
+                <p>When asked about their religious beliefs, a plurality of surveyed freshmen&mdash;22 percent&mdash;described themselves as Catholic. The next most popular religions, in descending order, were Protestantism, Judaism, and Islam. A combined 32 percent characterized themselves as atheist or agnostic, several points above the national average.</p>
+            </li>
+            <li id="religiosity-tab">
+                <h2>Religiosity</h2>
+                <div id="religiosity" class="graph"></div>
+                <p>Although 58 percent of surveyed  freshmen said they identify with a major religion, only 43 percent said they consider themselves in any way religious. Fewer still&mdash;24 percent of respondents&mdash;characterized themselves either religious or very religious. By contrast, 57 percent of Harvard&#39;s newest students said they are either not very religious or not religious at all.</p>
+            </li>
+            <li id="religion-region-tab">
+                <h2>Religion by Region</h2>
+                <div id="religion-region" class="graph"></div>
+                <p>Catholicism was the most common religion among Northeasterners and Midwesterners, while Protestantism was the most popular religion among Southeasterners, Southwesterners, and Westerners.</p>
+                <p>Of students surveyed from outside the United States, roughly half identified themselves as atheist or agnostic.</p>
+                <p>In the Northeast, where two-fifths of respondents call home, 23 percent said they are Catholic, 17 percent said they are Protestant, and 14 percent&mdash;a figure twice as large as in any other region&mdash;identified as Jewish. Thirty-one percent of surveyed Northeasterners said they consider themselves atheist or agnostic.</p> 
+            </li>
+            <li id="religion-income-tab">
+                <h2>Religiosity by Income</h2>
+                <div id="religion-income" class="graph"></div>
+                <p>Students from lower- and middle-income families were more likely to identify as very religious than their wealthier peers. Students from households in the $250,000 to $500,000 a year bracket were most likely to call themselves not at all religious, and least likely to say they are very religious.</p> 
+            </li>
+            <li id="religion-race-tab">
+                <h2>Ethnicity by Religion</h2>
+                <div id="religion-race" class="graph"></div>
+                <p>Catholicism was the most common religion among white students, while a plurality of Asian students identified as atheist or agnostic. Half of incoming Hispanics identified as Catholics.</p> 
+            </li>
+            <li id="religion-religion-tab">
+                <h2>Religiosity by Religion</h2>
+                <div id="religion-religion" class="graph"></div>
+                <p>Of those respondents who reported adherence to a major religion, Jews are the least religious, with 12 percent saying they are religious or very religious. By contrast, of those who identified themselves as Mormon, 80 percent said they were religious or very religious. Fifty-four percent of Protestants, the largest self-reported religious group, identified themselves as religious or very religious.</p> 
+            </li>
+        </ul>
+    </div>
+
+    <div id="TheCrimson_AllArticles_ATF_300x250" class="box ad">
+        <script type='text/javascript'>
+            googletag.cmd.push(function() { googletag.display('TheCrimson_AllArticles_ATF_300x250'); });
+        </script>
+    </div>
+
+    <div class="scroll-row">
+        <h1>Politics</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#politics-tab" data-toggle="tab">Political Persuasion</a>
+            </li>
+            <li>
+                <a href="#regions-outer" data-toggle="tab">Regional Politics</a>
+            </li>
+            <li>
+                <a href="#politics-religion-tab" data-toggle="tab">Politics by Religion</a>
+            </li>
+            <li>
+                <a href="#politics-income-tab" data-toggle="tab">Politics by Parents' Income</a>
+            </li>
+            <li>
+                <a href="#politics-sexuality-tab" data-toggle="tab">Politics by Sexual Orientation</a>
+            </li>
+            <li>
+                <a href="#politics-ethnicity-tab" data-toggle="tab">Politics by Ethnicity</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="politics-tab" class="active">
+                <h2>Political Persuasion</h2>
+                <div id="politics"></div>
+                <p></p>
+            </li>
+            <li id="regions-outer" class="clearfix">
+                <div id="regions-inner">
+                    <div id="paper">
+                        <p>Westerners were least likely to identify as conservative and most likely to call themselves liberals. Respondents who called themselves conservative were most likely to hail from the Southeast, where 18 percent of new students said they fall to the right of the political spectrum.</p>
+                    </div>
+                    <div id="regions-right">
+                        <h2>Mouseover region to see data.</h2>
+                        <div id="northeast" class="region">
+                            <h3>
+                                <div class="region-stat">62.8%</div>
+                                identify as liberal.
+                            </h3>
+                            <h3>
+                                <div class="region-stat">21.5%</div>
+                                consider themselves moderates.
+                            </h3>
+                            <h3>
+                                <div class="region-stat">15.7%</div>
+                                identify as conservative.
+                            </h3>
+                        </div>
+                        <div id="southeast" class="region">
+                            <h3>
+                                <div class="region-stat">56.8%</div>
+                                identify as liberal.
+                            </h3>
+                            <h3>
+                                <div class="region-stat">25.2%</div>
+                                consider themselves moderates.
+                            </h3>
+                            <h3>
+                                <div class="region-stat">18%</div>
+                                identify as conservative.
+                            </h3>
+                        </div>
+                        <div id="midwest" class="region">
+                            <h3>
+                                <div class="region-stat">54.9%</div>
+                                identify as liberal.
+                            </h3>
+                            <h3>
+                                <div class="region-stat">30.5%</div>
+                                consider themselves moderates.
+                            </h3>
+                            <h3>
+                                <div class="region-stat">14.6%</div>
+                                identify as conservative.
+                            </h3>
+                        </div>
+                        <div id="southwest" class="region">
+                            <h3>
+                                <div class="region-stat">51.2%</div>
+                                identify as liberal.
+                            </h3>
+                            <h3>
+                                <div class="region-stat">33.7%</div>
+                                consider themselves moderates.
+                            </h3>
+                            <h3>
+                                <div class="region-stat">15.1%</div>
+                                identify as conservative.
+                            </h3>
+                        </div>
+                        <div id="west" class="region">
+                            <h3>
+                                <div class="region-stat">68.8%</div>
+                                identify as liberal.
+                            </h3>
+                            <h3>
+                                <div class="region-stat">21.2%</div>
+                                consider themselves moderates.
+                            </h3>
+                            <h3>
+                                <div class="region-stat">10.0%</div>
+                                identify as conservative.
+                            </h3>
+                        </div>                              
+                    </div>                              
+                </div>
+                <p></p>
+            </li>
+            <li id="politics-region-tab">
+                <h2>Politics by Region</h2>
+                <div id="politics-region" class="graph"></div>
+                <p>Westerners were least likely to identify as conservative and most likely to call themselves liberals. Respondents who called themselves conservative were most likely to hail from the Southeast, where 18 percent of new students said they fall to the right of the political spectrum.</p>
+            </li>
+            <li id="politics-religion-tab">
+                <h2>Politics by Religion</h2>
+                <div id="politics-religion" class="graph"></div>
+                <p>Among Catholics, 28 percent said they were conservative. Twenty-seven percent of Protestants called themselves conservative. Just 5 percent of athiests and agnostics said they fall to the right of the political spectrum.</p>
+            </li>
+            <li id="politics-income-tab">
+                <h2>Politics by Parents' Income</h2>
+                <div id="politics-income" class="graph"></div>
+                <p>Fifty-seven percent of respondents from the lowest income bracket on the survey—a combined parental income of less than $40,000—identified as liberal. Just 5 percent of them identified as very or somewhat conservative. On the other hand, 23 percent of respondents from the highest income bracket—a combined parental income of more than $500,000—identified as conservative.</p>
+            </li>
+            <li id="politics-sexuality-tab">
+                <h2>Politics by Sexual Orientation</h2>
+                <div id="politics-sexuality" class="graph"></div>
+                <p>None of the 41 respondents who identified as homosexual called themselves conservative. Approximately 95 percent of respondents who identified as conservative identified as heterosexual.</p>
+            </li>
+            <li id="politics-ethnicity-tab">
+                <h2>Politics by Ethnicity</h2>
+                <div id="politics-ethnicity" class="graph"></div>
+                <p>Less than 5 percent of African-American or black respondents said they were conservative, compared to nearly 20 percent of white students.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="scroll-row">
+        <h1>Sex</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#sex-tab" data-toggle="tab">Sexual Activity</a>
+            </li>
+            <li>
+                <a href="#sex-gender-tab" data-toggle="tab">Sexual Activity by Gender</a>
+            </li>
+            <li>
+                <a href="#sex-age-tab" data-toggle="tab">Age of First Sexual Activity</a>
+            </li>
+            <li>
+                <a href="#sex-partners-tab" data-toggle="tab">Sexual Partners</a>
+            </li>
+            <li>
+                <a href="#sex-religion-tab" data-toggle="tab">Sexual Activity by Religion</a>
+            </li>
+            <li>
+                <a href="#sex-partners-gender-tab" data-toggle="tab">Sexual Partners by Gender</a>
+            </li>
+            <li>
+                <a href="#sex-partners-athletes-tab" data-toggle="tab">Sexual Activity by Recruitment Status</a>
+            </li>
+            <li>
+                <a href="#sex-orientation-tab" data-toggle="tab">Sexual Activity by Sexuality</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="sex-tab" class="active">
+                <h2>Sexual Activity</h2>
+                <div id="sex"></div>
+                <p>The incoming class has not had a lot of it. Sixty-five percent of respondents said they had never done the deed before arriving on campus.</p>
+            </li>
+            <li id="sex-gender-tab">
+                <h2>Sexual Activity by Gender</h2>
+                <div id="sex-gender" class="graph"></div>
+                <p>Men were more likely than women to report having lost their virginity. Moreover, men were likely to have had sex at a younger age than women.</p>
+            </li>
+            <li id="sex-age-tab">
+                <h2>Age of First Sexual Activity Among Non-Virgins</h2>
+                <div id="sex-age" class="graph"></div>
+                <p>Among the 35 percent of surveyed freshmen who have had sex, the vast majority said they lost their virginity in high school.</p>
+            </li>
+            <li id="sex-partners-tab">
+                <h2>Sexual Partners</h2>
+                <div id="sex-partners" class="graph"></div>
+                <p>The majority of those who have had sex&mdash;62 percent&mdash;said they&#39;ve only done the deed with one person. Seven respondents, all of whom were male, reported having had sex with more than 10 partners.</p>
+            </li>
+            <li id="sex-religion-tab">
+                <h2>Sexual Activity by Religion</h2>
+                <div id="sex-religion" class="graph"></div>
+                <p>Jewish respondents were most likely of any religious group to report having lost their virginity&mdash;half of them said they had had intercourse. All of the Mormon respondents said they were virgins.</p>
+            </li>
+            <li id="sex-partners-gender-tab">
+                <h2>Sexual Partners by Gender</h2>
+                <div id="sex-partners-gender" class="graph"></div>
+                <p>While most respondents said they had only one sexual partner, men were more likely than women to have had sex with more than one person.</p>
+            </li>
+            <li id="sex-partners-athletes-tab">
+                <h2>Sexual Activity by Recruitment Status</h2>
+                <div id="sex-partners-athletes" class="graph"></div>
+                <p>The survey suggests that recruited athletes are more likely than their non-recruited peers to have done the deed. Fifty-three percent of recruits said they&#39;ve had sex, while just a third of the rest of the class said they&#39;ve lost their virginity.</p>
+            </li>
+            <li id="sex-orientation-tab">
+                <h2>Sexual Activity by Sexuality</h2>
+                <div id="sex-orientation" class="graph"></div>
+                <p>Surveyed freshmen who identify as homosexual or bisexual are more likely than their heterosexual peers to report that they have had sex. Forty-five percent of homosexuals and 56 percent of bisexuals reported having had sex, compared to 35 percent of heterosexuals. Among freshmen who are questioning their sexuality, only 20 percent reported that they have lost their virginity.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="TheCrimson_AllArticles_BTF_300x250" class="box ad">
+        <script type='text/javascript'>
+            googletag.cmd.push(function() { googletag.display('TheCrimson_AllArticles_BTF_300x250'); });
+        </script>
+    </div>
+
+    <div class="scroll-row">
+        <h1>Drugs</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#drugs-alcohol-tab" data-toggle="tab">Alcohol Drinkers</a>
+            </li>
+            <li>
+                <a href="#drugs-weed-tab" data-toggle="tab">Marijuana Users</a>
+            </li>
+            <li>
+                <a href="#drugs-hard-tab" data-toggle="tab">Hard Drug Users</a>
+            </li>
+            <li>
+                <a href="#drugs-fake-tab" data-toggle="tab">Fake IDs</a>
+            </li>
+            <li>
+                <a href="#drugs-fake-urban-tab" data-toggle="tab">Fake IDs by Type of Community</a>
+            </li>
+            <li>
+                <a href="#drugs-gender-tab" data-toggle="tab">Drug Use by Gender</a>
+            </li>
+            <li>
+                <a href="#drugs-school-type-tab" data-toggle="tab">Drug Use by School Type</a>
+            </li>
+            <li>
+                <a href="#drugs-athletes-tab" data-toggle="tab">Drug Use by Recruitment Status</a>
+            </li>
+            <li>
+                <a href="#drugs-religion-tab" data-toggle="tab">Drinkers by Religion</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="drugs-alcohol-tab" class="active">
+                <h2>Alcohol Drinkers</h2>
+                <div id="drugs-alcohol" class="graph"></div>
+                <p>Sixty percent of respondents said they tried alcohol before coming to Harvard, and 35 percent of surveyed freshmen claimed to drink at least once a month. Fifteen percent reported having a drink once a week or more.</p>
+            </li>
+            <li id="drugs-weed-tab">
+                <h2>Marijuana Users</h2>
+                <div id="drugs-weed" class="graph"></div>
+                <p>Twenty-two percent of respondents said they have tried marijuana, slightly more than said they have tried tobacco. Eight percent of respondents reported using marijuana once a month or more.</p>
+            </li>
+            <li id="drugs-hard-tab">
+                <h2>Hard Drug Users</h2>
+                <div id="drugs-hard" class="graph"></div>
+                <p>Only a small minority of respondents reported having tried hard drugs. Less than 1 percent said they had tried cocaine, and less than 2 percent said they had done mushrooms. Less than 3 percent reported having tried ecstasy or molly, a colloquial term for a form of the drug. A little more than 3 percent said they have tried using study drugs.</p>
+            </li>
+            <li id="drugs-fake-tab">
+                <h2>Fake IDs</h2>
+                <div id="drugs-fake" class="graph"></div>
+                <p>The majority of respondents said they have tried a drink, but only 9 percent of respondents reported owning a fake ID.</p>
+            </li>
+            <li id="drugs-fake-urban-tab">
+                <h2>Fake IDs by Type of Community</h2>
+                <div id="drugs-fake-urban" class="graph"></div>
+                <p>While only 9 percent of respondents overall said they own a fake ID, 18 percent of respondents living in an urban area said they have an illegal card. By contrast, 6 percent of those living in a suburban area and 2 percent of those living in a rural area said they own a fake.</p>
+            </li>
+            <li id="drugs-gender-tab">
+                <h2>Drug Use by Gender</h2>
+                <div id="drugs-gender" class="graph"></div>
+                <p>Men were more likely than women to say they have tried alcohol, tobacco, and marijuana.</p>
+            </li>
+            <li id="drugs-school-type-tab">
+                <h2>Drug Use by Type of School</h2>
+                <div id="drugs-school-type" class="graph"></div>
+                <p>Respondents who attended private school were more likely than their public-school peers to say they have tried alcohol.</p>
+            </li>
+            <li id="drugs-athletes-tab">
+                <h2>Drug Use by Recruitment Status</h2>
+                <div id="drugs-athletes" class="graph"></div>
+                <p>Recruited athletes were more likely than non-recruits to report having tried alcohol, but slightly less likely to say they had used marijuana.</p>
+            </li>
+            <li id="drugs-religion-tab">
+                <h2>Drinkers by Religion</h2>
+                <div id="drugs-religion" class="graph"></div>
+                <p>Among religions, Jewish respondents were most likely to report having had a drink, with three fourths saying they tried alcohol at least once before coming to Harvard. Protestants fell in the middle, with half reporting that they have had a drink.</p>
+            </li>            
+        </ul>
+    </div>
+    <div class="scroll-row">
+        <h1>Mental Health</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#mental-tab" data-toggle="tab">Mental Health Counseling</a>
+            </li>
+            <li>
+                <a href="#mental-income-tab" data-toggle="tab">Mental Health Counseling by Parents' Income</a>
+            </li>
+            <li>
+                <a href="#mental-sexuality-tab" data-toggle="tab">Mental Health Counseling by Sexuality</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="mental-tab" class="active">
+                <h2>Mental Health Counseling</h2>
+                <div id="mental" class="graph"></div>
+                <p>Thirteen percent of survey respondents said they have sought mental health counseling at some point in their lives.</p>
+            </li>
+            <li id="mental-income-tab">
+                <h2>Mental Health Counseling by Parents' Income</h2>
+                <div id="mental-income" class="graph"></div>
+                <p>Respondents whose parents make between $125,000 and $250,000 a year were most likely to report that they have sought mental health counseling. Respondents in the highest income bracket—a parental income of more than $500,000 a year—were next most likely.</p>
+            </li>
+            <li id="mental-sexuality-tab">
+                <h2>Mental Health Counseling by Sexuality</h2>
+                <div id="mental-sexuality" class="graph"></div>
+                <p>Among sexual orientations, bisexual respondents were most likely and hetereosexuals least likely to report having sought mental health counseling.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="scroll-row">
+        <h1>Technology</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#computers-raw-tab" data-toggle="tab">Computers</a>
+            </li>
+            <li>
+                <a href="#phone-type-tab" data-toggle="tab">Type of Phone</a>
+            </li>
+            <li>
+                <a href="#income-mac-tab" data-toggle="tab">Income vs. Mac</a>
+            </li>
+            <li>
+                <a href="#income-iphone-tab" data-toggle="tab">Income vs. iPhone</a>
+            </li>
+            <li>
+                <a href="#facebook-tab" data-toggle="tab">Facebook Usage</a>
+            </li>
+            <li>
+                <a href="#twitter-tab" data-toggle="tab">Twitter Usage</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="computers-raw-tab" class="active">
+                <h2>Computers</h2>
+                <div id="computers" class="graph"></div>
+                <p>More than two thirds&mdash;68 percent&mdash;of surveyed freshmen said they own a Mac. Nearly all the rest use PCs.</p>
+            </li>
+            <li id="phone-type-tab">
+                <h2>Cell Phones</h2>
+                <div id="phone-type" class="graph"></div>
+                <p>Seventy percent of respondents said they own an iPhone. Seventeen percent said they have an Android phone, and 1 percent a Blackberry.</p>
+            </li>
+            <li id="income-mac-tab">
+                <h2>Mac Ownership by Parents&#39; Income</h2>
+                <div id="income-mac" class="graph"></div>
+                <p>Only in the lowest parental income bracket&mdash;below $40,000 a year&mdash;were respondents more likely to own a Windows computer than a Mac. Ninety-one percent of respondents whose parents combine to earn more than $500,000 a year own a Mac.</p>
+            </li>
+            <li id="income-iphone-tab">
+                <h2>iPhone Ownership by Parents&#39; Income</h2>
+                <div id="income-iphone" class="graph"></div>
+                <p>In each and every income bracket, the iPhone is king. Overall, 70 percent of respondents said they own an iPhone, including nearly 93 percent in the top income bracket&mdash;a combined parental income of more than $500,000. However, as income bracket decreased, so too did iPhone ownership; just 55 percent of respondents in the lowest income bracket&mdash;a combined parental income below $40,000&mdash;reported owning an iPhone.</p>
+            </li>
+            <li id="facebook-tab">
+                <h2>Facebook Usage</h2>
+                <div id="facebook" class="graph"></div>
+                <p>An overwhelming majority&mdash;97 percent&mdash;of surveyed freshmen said they have a Facebook account. Among these Facebook users, half said they spend more than an hour a day on the social media site.</p>
+            </li>
+            <li id="twitter-tab">
+                <h2>Twitter Usage</h2>
+                <div id="twitter" class="graph"></div>
+                <p>Though nearly all respondents reported having a Facebook account, less than half of surveyed freshmen said they have an account with the social media site&#39;s competitor, Twitter. Those who reported having Twitter accounts said they spend on average much less time on Twitter than on Facebook, with most spending fewer than 15 minutes each day.</p>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
