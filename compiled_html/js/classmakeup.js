@@ -26,8 +26,8 @@
         2018: 'data/2018/0/0/athletes_raw.csv'
     }, '#athletes-raw');
     createChart('column', {
-        2017: 'data/2017/0/0/athletes_vs_race.csv'
-    }, '#athletes-vs-race');
+        2018: 'data/2018/0/0/athletes-family-income.csv'
+    }, '#athletes-vs-income');
 
     // Geography
     createChart('pie', {
