@@ -720,6 +720,30 @@ header ul li.inactive:hover {
 	margin-bottom: 10px;
 }
 
+#year-switch {
+    text-align: center;
+}
+
+#year-switch .year-switch-option {
+    display: inline-block;
+    font-size: 22px;
+    padding: 7px 5px;
+    background-color: #D3d3d3;
+    cursor: pointer;
+
+    /* http://stackoverflow.com/questions/826782 */
+    -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+#year-switch .year-switch-option.selected {
+    background-color: rgba(187,6,0,0.95);
+    color: #FAFAFA;
+}
+
 @media (max-width: 1277px) {
 	.intro p {
 		max-width: 550px;
@@ -742,4 +766,22 @@ header ul li.inactive:hover {
 	.nav > li > a {
 		font-size: 0.9em;
 	}
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1;
 }
