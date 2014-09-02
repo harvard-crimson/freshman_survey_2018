@@ -260,6 +260,9 @@ function createFullerChart(type, titles, colors, filenames, unit, div) {
 
                 if (line != '' && line != null) {
                     var items = line.split(',');
+                    for (var i = 0; i < items.length; i++) {
+                        items[i] = items[i].replace(/&#44;/g, ",");
+                    }
 
                     if (type == 'pie') {
                         options.series[datanum].data.push([items[0], parseFloat(items[1])]);
