@@ -2,6 +2,12 @@ var colorset = ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce', '#492970'
         '#f28f43', '#77a1e5', '#c42525', '#a6c96a'];
 var colorindex = 0;
 
+function makeLegend(years) {
+    return $("<ul class='year-switch'></ul>").append($.map(years, function (year) {
+        return $("<li class='year-switch-option'></li>").text(year);
+    }));
+}
+
 $(document).ready(function () {
 
     $('.nav-tabs li a').click(function (e) {
@@ -87,23 +93,56 @@ function csv_to_scatter(filename, wrapper, xlabel, ylabel, color) {
 }
 
 function createChart(type, filename, divsel) {
-    createMultiChart(type, null, null, [filename], divsel);
+    createMultiChart(type, null, null, filename, divsel);
 }
 
 function createNumericChart(type, filename, divsel)
 {
-    createFullChart(type, null, null, [filename], '', divsel);
+    createFullChart(type, null, null, filename, '', divsel);
 }
 
 function createChartColor(type, color, filename, divsel) {
-    createMultiChart(type, null, [color], [filename], divsel);
+    createMultiChart(type, null, [color], filename, divsel);
 }
 
 function createMultiChart(type, titles, colors, filenames, divsel) {
     createFullChart(type, titles, colors, filenames, '%', divsel)
 }
 
-function createFullChart(type, titles, colors, filenames, unit, divsel) {
+function createFullChart(type, titles, colors, filenamesByYear, unit, divsel) {
+    var yearLegend = makeLegend(Object.keys(filenamesByYear));
+    var id = $(divsel).attr("id");
+    var maxYear = Math.max.apply(Math, Object.keys(filenamesByYear));
+
+    $(divsel).addClass(id);
+
+    yearLegend.find("li").click(function (year) {
+        $(this).addClass("selected");
+        $(this).siblings("li").removeClass("selected");
+        $("." + id).hide();
+        $("#" + id + $(this).text()).show();
+        $(window).trigger("resize");
+    });
+    $(divsel).before(yearLegend);
+
+    $.each(filenamesByYear, function (year, filenames) {
+        var div = $(divsel).clone();
+        div.attr("id", id + year);
+        $(divsel).after(div);
+
+        if (!Array.isArray(filenames)) {
+            filenames = [filenames];
+        }
+
+        createFullerChart(type, titles, colors, filenames, unit, div);
+    });
+
+    $("." + id).hide();
+    $("#" + id + maxYear).show();
+    yearLegend.find("li:contains(" + maxYear + ")").addClass("selected");
+}
+
+function createFullerChart(type, titles, colors, filenames, unit, div) {
     var options = {
         chart: {
             defaultSeriesType: type,
@@ -200,10 +239,6 @@ function createFullChart(type, titles, colors, filenames, unit, divsel) {
         options = $.extend(options, barOptions);
     }
 
-    if (divsel == '#religion-religion') {
-        options.yAxis.categories = ['Not at all religious','Not very religious','Somewhat religious','Religious','Very religious',''];
-    }
-
     $.each(filenames, function(datanum, filename){
         $.get(filename, function(data) {
             // Split the lines
@@ -245,7 +280,7 @@ function createFullChart(type, titles, colors, filenames, unit, divsel) {
                 }
             });
 
-            $(divsel).highcharts(options);
+            div.highcharts(options);
 
         });
     });

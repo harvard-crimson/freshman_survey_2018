@@ -596,11 +596,11 @@ header ul li.inactive:hover {
 	padding: 0;
 }
 
-.tab-panes li {
+.tab-panes > li {
 	display: none;
 }
 
-.tab-panes li.active {
+.tab-panes > li.active {
 	display: block;
 }
 
@@ -720,11 +720,11 @@ header ul li.inactive:hover {
 	margin-bottom: 10px;
 }
 
-#year-switch {
+.year-switch {
     text-align: center;
 }
 
-#year-switch .year-switch-option {
+.year-switch-option {
     display: inline-block;
     font-size: 22px;
     padding: 7px 5px;
@@ -739,7 +739,7 @@ header ul li.inactive:hover {
    user-select: none;
 }
 
-#year-switch .year-switch-option.selected {
+.year-switch-option.selected {
     background-color: rgba(187,6,0,0.95);
     color: #FAFAFA;
 }
