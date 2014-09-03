@@ -17,9 +17,12 @@ $(document).ready(function() {
         2017: 'data/2017/1/0/sat_ethnicity.csv',
         2018: 'data/2018/1/0/sat_ethnicity.csv'
     }, '#sat-ethnicity');
-    // csv_to_scatter('data/2017/1/0/gpa_sat.csv', 'sat-gpa', 'GPA', 'SAT Score', colorset[colorindex++ % colorset.length]);
+    csv_to_scatter({
+        2017: 'data/2017/1/0/gpa_sat.csv',
+        2018: 'data/2018/1/0/gpa_sat.csv'
+    }, 'sat-gpa', 'GPA', 'SAT Score', colorset[colorindex++ % colorset.length]);
 
-    // // Financial Aid
+    // Financial Aid
     createChart('pie', {
         2017: 'data/2017/1/1/financial_aid_raw.csv',
         2018: 'data/2018/1/1/financial_aid_raw.csv'
@@ -41,8 +44,11 @@ $(document).ready(function() {
         2018: 'data/2018/1/1/income_counselor.csv'
     }, '#income-counselor');
 
-    // // College Acceptances
-    // csv_to_scatter('data/2017/1/2/applied_accepted.csv', 'application-numbers', 'Applied to', 'Accepted to', colorset[colorindex++ % colorset.length]);
+    // College Acceptances
+    csv_to_scatter({
+        2017: 'data/2017/1/2/applied_accepted.csv',
+        2018: 'data/2018/1/2/applied_accepted.csv',
+    }, 'application-numbers', 'Applied to', 'Accepted to', colorset[colorindex++ % colorset.length]);
     createChart('pie', {
         2017: 'data/2017/1/2/early.csv',
         2018: 'data/2018/1/2/early.csv'
@@ -64,7 +70,7 @@ $(document).ready(function() {
         2018: 'data/2018/1/2/early_school_type.csv'
     }, '#early-school-type');
 
-    // // Athletes
+    // Athletes
     createChart('pie', {
         2017: 'data/2017/0/0/athletes_raw.csv',
         2018: 'data/2018/0/0/athletes_raw.csv'
