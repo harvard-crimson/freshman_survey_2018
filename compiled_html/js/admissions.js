@@ -13,6 +13,11 @@ $(document).ready(function() {
         2017: ['data/2017/1/0/sat_public.csv', 'data/2017/1/0/sat_private.csv'],
         2018: ['data/2017/1/0/sat_public.csv', 'data/2017/1/0/sat_private.csv']
     }, '', '#sat-school-type');    
+
+    createFullChart('column', ['Public', 'Private'], null, {
+        2018: ['data/2018/1/0/sat_legacy.csv']
+    }, '', '#sat-legacy');    
+
     createNumericChart('bar', {
         2017: 'data/2017/1/0/sat_ethnicity.csv',
         2018: 'data/2018/1/0/sat_ethnicity.csv'
@@ -54,6 +59,12 @@ $(document).ready(function() {
         2018: 'data/2018/1/2/early.csv'
     }, '#early');
     createChart('pie', {
+        2018: 'data/2018/1/2/legacy_early.csv'
+    }, '#early-legacy');
+    createChart('pie', {
+        2018: 'data/2018/1/2/legacy_ethnicity.csv'
+    }, '#legacy-ethnicity');
+    createChart('pie', {
         2017: 'data/2017/1/2/top_choice.csv',
         2018: 'data/2018/1/2/top_choice.csv'
     }, '#top-choice');
@@ -79,10 +90,10 @@ $(document).ready(function() {
         2017: 'data/2017/1/3/recruited_sat.csv',
         2018: 'data/2018/1/3/recruited_sat.csv'
     }, '#sat-athletes');
-    createChart('column', {
-        2017: 'data/2017/1/3/recruited_income.csv',
-        2018: 'data/2018/1/3/recruited_income.csv'
-    }, '#income-athletes');
+    // createChart('column', {
+    //     2017: 'data/2017/1/3/recruited_income.csv',
+    //     2018: 'data/2018/1/3/recruited_income.csv'
+    // }, '#income-athletes');
 
     $(window).trigger('resize');
     for (var chart in Highcharts.charts) {

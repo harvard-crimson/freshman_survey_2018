@@ -17,9 +17,9 @@
 {% block content %}
     <div class="intro scroll-row">
         <div id="subhead">Admissions and Financial Aid</div>
-        <p>Part II of The Crimson&#39;s Class of 2017 Survey examines admissions and financial aid at Harvard. According to reports from the survey, the average Harvard freshman receives financial aid, comes from a household that earns between $125,000 and $250,000 per year, and scored a 2237 on the SAT. Average standardized test scores varied by ethnicity and income, as well as varsity status&mdash;recruited athletes, on average, scored 173 points lower on the SATs than their non-recruited classmates.</p>
-        <p>About 14 percent of the incoming freshman said their families earn above $500,000 per year, putting them among the top 1 percent of earners in the United States.</p>
-        <p>Read Part II of The Crimson's four-part series on the freshman survey <a href="http://www.thecrimson.com/article/2013/9/4/freshman-survey-admissions-aid/">here</a>.</p>
+        <p>Part II of The Crimson&rsquo;s survey of the Class of 2018 examines admissions and financial aid at Harvard, revealing, in several key areas, how dramatically the process of getting here varies with family income, the type of high school attended, and legacy status.</p> 
+        <p>The average Harvard freshman who responded to the survey&mdash;more than 70 percent of the class responded&mdash;receives financial aid and scored a 2237 on the SAT. Average standardized test scores varied by ethnicity and income, as well as athletic status. Recruited athletes, for example, scored 187 points lower on average on the SATs than their non-recruited classmates. And about 15 percent of the incoming freshmen said their families earn above $500,000 per year, putting them among the top 1 percent of earners in the United States.</p>
+        <p>Read Part II of The Crimson's five-part series on the freshman survey <a href="http://www.thecrimson.com/article/2014/9/3/freshman-survey-2018-admissions/">here</a>.</p>
     </div>
 
     <div class="scroll-row">
@@ -40,33 +40,41 @@
             <li>
                 <a href="#sat-school-type-tab" data-toggle="tab">SAT by School Type</a>
             </li>
+            <li>
+                <a href="#sat-legacy-tab" data-toggle="tab">SAT by Legacy</a>
+            </li>
         </ul>
         <ul class="tab-panes">
             <li id="sat-tab" class="active">
                 <h2>GPA vs. SAT Score</h2>
                 <div class="scatter"><svg id="sat-gpa"></svg></div>
-                <p>The average self-reported unweighted GPA on a 4.0 scale was 3.94. Fifty-four percent of students reported a perfect 4.0, and the lowest score reported was a 3.0.</p>
-                <p>Freshmen reported an average composite SAT score of 2237. The reported average subject score was consistent across the three sections, with an average of 748 in the math section, 746 on writing, and 744 on critical reading.</p>
+                <p>The average self-reported unweighted GPA on a 4.0 scale was 3.93. Fifty-four percent of students reported a perfect 4.0 or above, the same as last year, and the lowest score reported was a 3.3, a marginal increase over respondents to last year&rsquo;s survey.</p>
+                <p>Freshmen reported an average composite SAT score of 2228, in line with that of last year&rsquo;s class. The reported average subject score was consistent across the three sections, with an average of 742 in the math section, 745 on writing, and 742 on critical reading.</p>
             </li>
             <li id="sat-ethnicity-tab">
                 <h2>Average SAT Scores by Ethnicity</h2>
                 <div id="sat-ethnicity" class="graph"></div>
-                <p>Although scores varied little between ethnicities, Asian and Indian respondents reported the highest average SAT scores, while those of black or African-American descent reported the lowest.</p>
+                <p>Although scores varied little between ethnicities, Asian respondents reported the highest average SAT scores; those of American Indian and Alaska native descent reported the lowest.</p>
             </li>
             <li id="sat-income-tab">
                 <h2>Average SAT Scores by Income Bracket</h2>
                 <div id="sat-income" class="graph"></div>
-                <p>SAT and ACT scores tended to increase with increases in income bracket.</p>
+                <p>Like last year, SAT and ACT scores tended to increase with each increasing income bracket.</p>
             </li>
             <li id="sat-gender-tab">
                 <h2>Average SAT Scores by Gender</h2>
                 <div id="sat-gender" class="graph"></div>
-                <p>Just 17 points separated reported men&#39;s and women&#39;s SATs, as female respondents reported slightly higher scores. The biggest difference by section came in the writing component, where females respondents outscored males by an average of 17 points. Women outscored men by 10 points in critical reading, and men topped women by 8 points in math.</p>
+                <p>Men and women performed nearly identically on the SAT. The average female critical reading score and writing score, though, slightly exceeded the average male score on the same sections. Male respondents on average outscored their female peers by about 17 points in the mathematics section.</p>
             </li>
             <li id="sat-school-type-tab">
                 <h2>Average SAT Scores by School Type</h2>
                 <div id="sat-school-type" class="graph"></div>
-                <p>Reported SAT averages varied little by school type, with students from charter schools and non-denominational private schools reporting average composite scores 20 points above those of students from public and parochial schools.</p>
+                <p>Reported SAT averages varied slightly by school type. In critical reading and writing, the average SAT of a respondent from a private school, including both non-denominational and parochial, was higher than the average SAT score of respondents from public schools. On the math section, scores were nearly identical between private and public school respondents.</p> 
+            </li>
+            <li id="sat-legacy-tab">
+                <h2>Average SAT Scores by Legacy</h2>
+                <div id="sat-legacy" class="graph"></div>
+                <p>The average SAT score reported by legacy respondents was 2296, compared to a 2237 average for non-legacy students.</p>
             </li>
         </ul>
     </div>
@@ -100,27 +108,27 @@
             <li id="financial-aid-tab" class="active">
                 <h2>Harvard Financial Aid Recipients</h2>
                 <div id="financial-aid" class="graph"></div>
-                <p>Fifty-eight percent of respondents reported that they would receive financial aid from the College.</p>
+                <p>54 percent of respondents reported that they would receive financial aid from the College, marking a four percentage point decrease from last year&rsquo;s class.</p>
             </li>
             <li id="parents-income-tab">
                 <h2>Family Income Distribution</h2>
                 <div id="parents-income" class="graph"></div>
-                <p>Fourteen percent of freshman respondents come from families with reported incomes above $500,000 a year, putting them among the top 1 percent of earners in the United States.</p>
+                <p>Fourteen percent of freshman respondents come from families with reported combined incomes above $500,000 a year, putting them among the top 1 percent of earners in the United States. By contrast, just 13 percent of freshman respondents said they come from families with reported incomes less than $40,000 a year. The majority of respondents come from families with a reported combined income of $125,000 or more.</p> 
             </li>
             <li id="urbanity-aid-tab">
                 <h2>Financial Aid by Community Type</h2>
                 <div id="urbanity-aid" class="graph"></div>
-                <p>Respondents from rural communities were the most likely to report receiving financial aid from the College.</p>
+                <p>Respondents from rural communities were the most likely to report receiving financial aid from the College, with 73 percent of rural students reporting that they receive financial aid from the College compared to slightly more than half of respondents who said they come from the suburbs.</p>
             </li>
             <li id="counselor-raw-tab">
                 <h2>College Counseling</h2>
                 <div id="counselor-raw" class="graph"></div>
-                <p>12.7 percent of respondents reported consulting with private admissions counselors who did not work for their high schools.</p>
+                <p>Sixteen percent of respondents reported consulting with private admissions counselors who did not work for their high schools when applying to college, marking a three percentage point increase from last year.</p>
             </li>
             <li id="income-counselor-tab">
                 <h2>Private Admissions Counseling by Income Bracket</h2>
                 <div id="income-counselor" class="graph"></div>
-                <p>The higher their parental income bracket, the more likely respondents were to have used private admissions counselors.</p>
+                <p>The higher their parental income bracket, the more likely respondents were to have used private admissions counselors. While less than 8 percent of students whose families make less than $40,000 per year reported using private admissions counselors, 32 percent of students whose families make over $500,000 reported use one.</p>
             </li>
         </ul>
     </div>
@@ -141,53 +149,64 @@
                 <a href="#early-tab" data-toggle="tab">Early Action</a>
             </li>
             <li>
+                <a href="#early-legacy-tab" data-toggle="tab">Legacy Admission</a>
+            </li>
+            <li>
+                <a href="#legacy-ethnicity-tab" data-toggle="tab">Legacy Diversity</a>
+            </li>
+            <li>
                 <a href="#top-choice-tab" data-toggle="tab">Top Choice</a>
             </li>
             <li>
-                <a href="#top-choice-early-tab" data-toggle="tab">Top Choice vs. Early Action</a>
+                <a href="#top-choice-early-tab" data-toggle="tab">Early Action Top Choice</a>
             </li>
             <li>
                 <a href="#early-income-tab" data-toggle="tab">Family Income</a>
             </li>
             <li>
-                <a href="#early-school-type-tab" data-toggle="tab">School Type</a>
+                <a href="#early-school-type-tab" data-toggle="tab">Early Admission by School Type</a>
             </li>
         </ul>
         <ul class="tab-panes">
             <li id="application-numbers-tab" class="active">
                 <h2>Applications and Acceptances</h2>
                 <div class="scatter"><svg id="application-numbers"></svg></div>
-                <p>Respondents applied to an average of 6.57 schools and were accepted to an average of 4.68.</p>
+                <p>Respondents applied to an average of 6.7 schools and were accepted to an average of 4.63.</p>
             </li>
             <li id="early-tab">
                 <h2>Early Action</h2>
                 <div id="early" class="graph"></div>
-                <p>About half of respondents said that they were accepted early to Harvard.</p>
+                <p>Fifty-six percent of respondents said that they were accepted early to Harvard, an increase of six percentage points from last year.</p>
+            </li>
+            <li id="early-legacy-tab">
+                <h2>Legacy Admission</h2>
+                <div id="early-legacy" class="graph"></div>
+                <p>Seventy-four percent of respondents who reported having at least one parent who attended the College said that they were accepted early to Harvard. By comparison, 56 percent of all respondents said they were admitted early.</p>
+            </li>
+            <li id="legacy-ethnicity-tab">
+                <h2>Legacy Diversity</h2>
+                <div id="legacy-ethnicity" class="graph"></div>
+                <p>Eighty-nine percent of respondents who reported having at least one parent who attended the college identified themselves as white. No respondents who identified as Indian or Pacific Islander said that they were legacy applicants.</p>
             </li>
             <li id="top-choice-tab">
                 <h2>Was Harvard Your Top Choice?</h2>
                 <div id="top-choice" class="graph"></div>
-                <p>Harvard was the top choice of 81.1 percent of respondents.</p>
+                <p>Harvard was the top choice of 83 percent of respondents, a figure similar to that of last year.</p>
             </li>
             <li id="top-choice-early-tab">
-                <h2>Top Choice vs. Early Action</h2>
+                <h2>Early Action Top Choice</h2>
                 <div id="top-choice-early" class="graph"></div>
-                <p>The College was the top choice of 95.8 percent of students who identified themselves as early action admits.</p>
+                <p>Harvard was the top choice of 97 percent of surveyed students who identified themselves as early action admits.</p>
             </li>
             <li id="early-income-tab">
                 <h2>Early Admission by Income Bracket</h2>
                 <div id="early-income" class="graph"></div>
-                <p>Respondents whose families had an income level of $250,000 or more were more likely to have been admitted early to Harvard.</p>
+                <p>The proportion of students who reported that they were accepted early to Harvard tended to increase with increases in income bracket.</p>
             </li>
             <li id="early-school-type-tab">
                 <h2>Early Admission by School Type</h2>
                 <div id="early-school-type" class="graph"></div>
-                <p>Students who attended private and parochial schools were more likely to have been admitted early than students who attended public and charter schools.</p>
-            </li>
-            <li id="early-race-tab">
-                <h2>Early Admits by Ethnicity</h2>
-                <div id="early-race" class="graph"></div>
-                <p>White respondents were the most likely to report that they were admitted early, at 55 percent. Indian respondents were least likely&mdash;just 32 percent of Indian students reported early acceptance to Harvard.</p>
+                <p>Like last year, students who attended private and parochial schools were more likely to have been admitted early than students who attended public and charter schools.</p>
             </li>
         </ul>
     </div>
@@ -201,26 +220,26 @@
             <li>
                 <a href="#sat-athletes-tab" data-toggle="tab">SAT Scores</a>
             </li>
-            <li>
-                <a href="#income-athletes-tab" data-toggle="tab">Family Income</a>
-            </li>
+            <!-- <li> -->
+            <!--     <a href="#income&#45;athletes&#45;tab" data&#45;toggle="tab">Family Income</a> -->
+            <!-- </li> -->
         </ul>
         <ul class="tab-panes">
             <li id="athletes-raw-tab" class="active">
                 <h2>Recruited Athletes</h2>
                 <div id="athletes-raw" class="graph"></div>
-                <p>Twelve percent of respondents identified themselves as recruited athletes.</p>
+                <p>Eleven percent of respondents identified themselves as recruited athletes, a figure similar to last year&rsquo;s freshman class.</p>
             </li>
             <li id="sat-athletes-tab">
                 <h2>SAT Scores by Recruitment Status</h2>
                 <div id="sat-athletes" class="graph"></div>
-                <p>Respondents who identified themselves as recruited athletes reported an average SAT composite score more than 170 points lower than the average score reported by non-recruits.</p>
+                <p>Respondents who identified themselves as recruited athletes reported an average SAT composite score more than 187 points lower than the average of scores reported by non-recruits.</p>
             </li>
-            <li id="income-athletes-tab">
-                <h2>Recruited Athletes by Income Bracket</h2>
-                <div id="income-athletes" class="graph"></div>
-                <p>Respondents from families with incomes under $80,000 were the least likely to be recruited athletes. Eight percent of students from those families reported that they were recruited athletes, while 15 percent of students from families that make over $80,000 said they had been recruited for athletics. </p>
-            </li>
+            <!-- <li id="income&#45;athletes&#45;tab"> -->
+            <!--     <h2>Recruited Athletes by Income Bracket</h2> -->
+            <!--     <div id="income&#45;athletes" class="graph"></div> -->
+            <!--     <p>Respondents from families with incomes under $80,000 were the least likely to be recruited athletes. Eight percent of students from those families reported that they were recruited athletes, while 15 percent of students from families that make over $80,000 said they had been recruited for athletics. </p> -->
+            <!-- </li> -->
         </ul>
     </div>
 

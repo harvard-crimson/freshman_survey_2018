@@ -122,11 +122,11 @@ header h1 {
 }
 
 #admissions1 {
-	background-image: url('../img/admissions_left_grey.jpeg');
+	background-image: url('../img/admissions_left.jpeg');
 }
 
 #admissions2 {
-	background-image: url('../img/admissions_right_grey.jpeg');
+	background-image: url('../img/admissions_right.jpeg');
 }
 
 #ac1 {
@@ -692,7 +692,6 @@ header ul li.inactive:hover {
 }
 .nav-tabs.nav-justified {
   width: 100%;
-  border-bottom: 0;
 }
 .nav-tabs.nav-justified > li {
   float: none;
@@ -731,6 +730,10 @@ header ul li.inactive:hover {
 
 .year-switch {
     text-align: center;
+}
+
+ul.year-switch {
+    padding-left: 0;
 }
 
 .year-switch-option {
