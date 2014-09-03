@@ -125,6 +125,7 @@ function createFullChart(type, titles, colors, filenamesByYear, unit, divsel) {
     });
     $(divsel).before(yearLegend);
 
+    var startidx = colorindex;
     $.each(filenamesByYear, function (year, filenames) {
         var div = $(divsel).clone();
         div.attr("id", id + year);
@@ -134,7 +135,13 @@ function createFullChart(type, titles, colors, filenamesByYear, unit, divsel) {
             filenames = [filenames];
         }
 
-        createFullerChart(type, titles, colors, filenames, unit, div);
+        var inc = 0;
+        if (type != 'pie')
+            inc = filenames.length;
+        else
+            inc = 2;
+            
+        createFullerChart(type, titles, colors, filenames, unit, div, startidx, inc);
     });
 
     $("." + id).hide();
@@ -142,7 +149,8 @@ function createFullChart(type, titles, colors, filenamesByYear, unit, divsel) {
     yearLegend.find("li:contains(" + maxYear + ")").addClass("selected");
 }
 
-function createFullerChart(type, titles, colors, filenames, unit, div) {
+function createFullerChart(type, titles, colors, filenames, unit, div, startidx, inc) {
+    colorindex += inc;
     var options = {
         chart: {
             defaultSeriesType: type,
@@ -252,7 +260,7 @@ function createFullerChart(type, titles, colors, filenames, unit, div) {
                 options.series[datanum]['color'] = colors[datanum];
             }
             else if (type != 'pie') {
-                options.series[datanum]['color'] = colorset[colorindex++ % colorset.length];
+                options.series[datanum]['color'] = colorset[startidx++ % colorset.length];
             }
 
             // Iterate over the lines and add categories or series
@@ -266,7 +274,7 @@ function createFullerChart(type, titles, colors, filenames, unit, div) {
 
                     if (type == 'pie') {
                         options.series[datanum].data.push([items[0], parseFloat(items[1])]);
-                        options.plotOptions.pie.colors.push(colorset[colorindex++ % colorset.length]);
+                        options.plotOptions.pie.colors.push(colorset[startidx++ % colorset.length]);
                     }
                     else if (type == 'column') {
                         if (datanum == 0) {
