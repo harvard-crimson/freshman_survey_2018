@@ -2,10 +2,29 @@ var colorset = ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce', '#492970'
         '#f28f43', '#77a1e5', '#c42525', '#a6c96a'];
 var colorindex = 0;
 
-function makeLegend(years) {
-    return $("<ul class='year-switch'></ul>").append($.map(years, function (year) {
+function makeLegend(years, id, divsel) {
+    var leg = $("<ul class='year-switch'></ul>").append($.map(years, function (year) {
         return $("<li class='year-switch-option'></li>").text(year);
     }));
+
+    var old = $(divsel).attr("class");
+    if (old === undefined)
+        old = "";
+    else
+        old += " ";
+
+    $(divsel).attr("class", old + id);
+
+    leg.find("li").click(function (year) {
+        $(this).addClass("selected");
+        $(this).siblings("li").removeClass("selected");
+        $("." + id).hide();
+        $("#" + id + $(this).text()).show();
+        $(window).trigger("resize");
+    });
+    $(divsel).before(leg);
+
+    return leg;
 }
 
 $(document).ready(function () {
@@ -62,34 +81,48 @@ function add_scatter_plot(vals, wrapper, xlabel, ylabel, color) {
     });
 }
 
-function csv_to_scatter(filename, wrapper, xlabel, ylabel, color) {
-    var vals = []
-    $.get(filename, function(data) {
-        // Split the lines
-        data = data.replace(/\r(?!\n)/g, "\n");
-        var lines = data.split('\n');
-        var items_last = [0, 0];
-        var size = 1;
-        $.each(lines, function(lineNo, line) {
-            var items = line.split(',');
-            items[0] = parseFloat(items[0]);
-            items[1] = parseFloat(items[1])
+function csv_to_scatter(filenamesByYear, id, xlabel, ylabel, color) {
+    var divsel = "#" + id;
+    var yearLegend = makeLegend(Object.keys(filenamesByYear), id, "#" + id);
+    var maxYear = Math.max.apply(Math, Object.keys(filenamesByYear));
 
-            if (items[0] == items_last[0] && items[1] == items_last[1]) {
-              size++;
-            }
-            else if (items_last[0] != 0) {
-              vals.push({x: items_last[0], y: items_last[1], size: size});
-              size = 1;
-            }
-            if (lineNo == lines.length - 1) {
-              vals.push({x: items[0], y: items[1], size: size});
-            }
-            items_last = [items[0],items[1]];
+    $.each(filenamesByYear, function (year, filename) {
+        var div = $(divsel).clone();
+        var vals = [];
+        div.attr("id", id + year);
+        $(divsel).after(div);
+        $.get(filename, function(data) {
+            // Split the lines
+            data = data.replace(/\r(?!\n)/g, "\n");
+            var lines = data.split('\n');
+            var items_last = [0, 0];
+            var size = 1;
+            $.each(lines, function(lineNo, line) {
+                var items = line.split(',');
+                items[0] = parseFloat(items[0]);
+                items[1] = parseFloat(items[1])
+
+                if (items[0] == items_last[0] && items[1] == items_last[1]) {
+                  size++;
+                }
+                else if (items_last[0] != 0) {
+                  vals.push({x: items_last[0], y: items_last[1], size: size});
+                  size = 1;
+                }
+                if (lineNo == lines.length - 1) {
+                  vals.push({x: items[0], y: items[1], size: size});
+                }
+                items_last = [items[0],items[1]];
+            });
+
+            console.log("filename: " + filename + ", id: " + id + year);
+            add_scatter_plot(vals, id + year, xlabel, ylabel, color);
         });
-
-        add_scatter_plot(vals, wrapper, xlabel, ylabel, color);
     });
+
+    $("." + id).hide();
+    $("#" + id + maxYear).show();
+    yearLegend.find("li:contains(" + maxYear + ")").addClass("selected");
 }
 
 function createChart(type, filename, divsel) {
@@ -110,20 +143,9 @@ function createMultiChart(type, titles, colors, filenames, divsel) {
 }
 
 function createFullChart(type, titles, colors, filenamesByYear, unit, divsel) {
-    var yearLegend = makeLegend(Object.keys(filenamesByYear));
     var id = $(divsel).attr("id");
+    var yearLegend = makeLegend(Object.keys(filenamesByYear), id, divsel);
     var maxYear = Math.max.apply(Math, Object.keys(filenamesByYear));
-
-    $(divsel).addClass(id);
-
-    yearLegend.find("li").click(function (year) {
-        $(this).addClass("selected");
-        $(this).siblings("li").removeClass("selected");
-        $("." + id).hide();
-        $("#" + id + $(this).text()).show();
-        $(window).trigger("resize");
-    });
-    $(divsel).before(yearLegend);
 
     var startidx = colorindex;
     $.each(filenamesByYear, function (year, filenames) {
