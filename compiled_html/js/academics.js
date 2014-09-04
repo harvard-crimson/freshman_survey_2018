@@ -15,19 +15,33 @@ $(document).ready(function() {
         2017: 'data/2017/2/0/homework_cheaters.csv',
         2018: 'data/2018/2/0/homework_cheaters.csv'
     }, '#homework-cheaters');
-    createMultiChart('column', ['Public', 'Private'], null, ['data/2/0/public_cheating.csv', 'data/2/0/private_cheating.csv'], '#cheating-school-type');    
+    createMultiChart('column', ['Public', 'Private'], null, {
+        2017: ['data/2017/2/0/public_cheating.csv', 'data/2017/2/0/private_cheating.csv'],
+        2018: ['data/2018/2/0/public_cheating.csv', 'data/2018/2/0/private_cheating.csv']
+    }, '#cheating-school-type');
+    createChart('column',{
+        2017: 'data/2017/2/0/cheating_by_recruit.csv',
+        2018: 'data/2018/2/0/cheating_by_recruit.csv'
+    }, '#cheating-recruits');
+    createChart('column',{
+        2018: 'data/2018/2/0/cheating_by_gender.csv'
+    }, '#cheating-gender');
     // createMultiChart('column', ['Recruited Athlete', 'Not a Recruited Athlete'], null, ['data/2/0/recruited_cheaters.csv', 'data/2/0/not_recruited_cheaters.csv'], '#cheating-athlete');    
     // createMultiChart('column', ['Male', 'Female'], null, ['data/2/0/male_cheaters.csv', 'data/2/0/female_cheaters.csv'], '#cheating-gender');    
 
     // In High School
-    createChart('pie',{
-        2017: 'data/2017/2/1/hours_studying_past.csv',
-        2018: 'data/2018/2/1/hours_studying_past.csv'
+    createMultiChart('column', {
+        2017: ['All'],
+        2018: ['All', 'Only athletes']
+    }, null, {
+        2017: ['data/2017/2/1/hours_studying_past.csv'],
+        2018: ['data/2018/2/1/hours_studying_past_all.csv', 'data/2018/2/1/hours_studying_past_athletes.csv']
     }, '#study-habits-past');
-    createChart('pie',{
-        2017: 'data/2017/2/1/math_level.csv',
-        2018: 'data/2018/2/1/math_level.csv'
-    }, '#math-level');
+    // cut
+    // createChart('pie',{
+    //     2017: 'data/2017/2/1/math_level.csv',
+    //     2018: 'data/2018/2/1/math_level.csv'
+    // }, '#math-level');
     createChart('bar',{
         2017: 'data/2017/2/1/extracurriculars.csv',
         2018: 'data/2018/2/1/extracurriculars.csv'
@@ -71,7 +85,10 @@ $(document).ready(function() {
         2017: 'data/2017/2/3/concussions.csv',
         2018: 'data/2018/2/3/concussions.csv'
     }, '#concussions');
-    createMultiChart('column', ['Never been concussed', 'Concussed Athletes'], null, ['data/2/3/not_concussed_changed_view.csv', 'data/2/3/concussed_changed_view.csv'], '#concussions-view');
+    createMultiChart('column', ['Never been concussed', 'Concussed Athletes'], null, {
+        2017: ['data/2017/2/3/not_concussed_changed_view.csv', 'data/2017/2/3/concussed_changed_view.csv'],
+        2018: ['data/2018/2/3/not_concussed_changed_view.csv', 'data/2018/2/3/concussed_changed_view.csv']
+    }, '#concussions-view');
 
     $(window).trigger('resize');
     for (var chart in Highcharts.charts) {
