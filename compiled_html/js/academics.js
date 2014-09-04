@@ -37,11 +37,13 @@ $(document).ready(function() {
         2017: ['data/2017/2/1/hours_studying_past.csv'],
         2018: ['data/2018/2/1/hours_studying_past_all.csv', 'data/2018/2/1/hours_studying_past_athletes.csv']
     }, '#study-habits-past');
-    // cut
-    // createChart('pie',{
-    //     2017: 'data/2017/2/1/math_level.csv',
-    //     2018: 'data/2018/2/1/math_level.csv'
-    // }, '#math-level');
+    createChart('pie',{
+        2017: 'data/2017/2/1/sources_of_pressure.csv',
+        2018: 'data/2018/2/1/sources_of_pressure.csv'
+    }, '#pressure');
+    createChart('bar',{
+        2018: 'data/2018/2/1/athletics_by_income.csv'
+    }, '#athletics-by-income');
     createChart('bar',{
         2017: 'data/2017/2/1/extracurriculars.csv',
         2018: 'data/2018/2/1/extracurriculars.csv'
