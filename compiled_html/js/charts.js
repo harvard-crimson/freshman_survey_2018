@@ -142,7 +142,7 @@ function createMultiChart(type, titles, colors, filenames, divsel) {
     createFullChart(type, titles, colors, filenames, '%', divsel)
 }
 
-function createFullChart(type, titles, colors, filenamesByYear, unit, divsel) {
+function createFullChart(type, titlesByYear, colors, filenamesByYear, unit, divsel) {
     var id = $(divsel).attr("id");
     var yearLegend = makeLegend(Object.keys(filenamesByYear), id, divsel);
     var maxYear = Math.max.apply(Math, Object.keys(filenamesByYear));
@@ -155,6 +155,11 @@ function createFullChart(type, titles, colors, filenamesByYear, unit, divsel) {
 
         if (!Array.isArray(filenames)) {
             filenames = [filenames];
+        }
+
+        var titles = titlesByYear;
+        if (typeof titles === "object" && !Array.isArray(titles) && titles !== null) {
+            titles = titlesByYear[year];
         }
 
         var inc = 0;
