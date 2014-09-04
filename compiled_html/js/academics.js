@@ -106,6 +106,9 @@ $(document).ready(function() {
         2017: ['data/2017/2/3/not_concussed_changed_view.csv', 'data/2017/2/3/concussed_changed_view.csv'],
         2018: ['data/2018/2/3/not_concussed_changed_view.csv', 'data/2018/2/3/concussed_changed_view.csv']
     }, '#concussions-view');
+    createChart('column',{
+        2018: 'data/2018/2/3/economics_conc_by_athletics.csv'
+    }, '#athletes-economics-conc');
 
     $(window).trigger('resize');
     for (var chart in Highcharts.charts) {
