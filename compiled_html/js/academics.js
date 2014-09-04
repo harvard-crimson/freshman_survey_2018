@@ -64,7 +64,10 @@ $(document).ready(function() {
         2017: 'data/2017/2/2/hours_studying_future.csv',
         2018: 'data/2018/2/2/hours_studying_future.csv'
     }, '#study-habits-future');
-    // createMultiChart('bar', ['Academics', 'Extracurriculars', 'Social Life', 'Paid Employment', 'Varsity Sports'], null, ['data/2/2/priorities_academics.csv', 'data/2/2/priorities_extracurriculars.csv', 'data/2/2/priorities_social.csv', 'data/2/2/priorities_job.csv', 'data/2/2/priorities_sports.csv'], '#priorities-raw');
+    createMultiChart('bar', ['Academics', 'Extracurriculars', 'Social Life', 'Paid Employment', 'Varsity Sports'], null, {
+        2017: ['data/2017/2/2/priorities_academics.csv', 'data/2017/2/2/priorities_extracurriculars.csv', 'data/2017/2/2/priorities_social.csv', 'data/2017/2/2/priorities_job.csv', 'data/2017/2/2/priorities_sports.csv'],
+        2018: ['data/2018/2/2/priorities_academics.csv', 'data/2018/2/2/priorities_extracurriculars.csv', 'data/2018/2/2/priorities_social.csv', 'data/2018/2/2/priorities_job.csv', 'data/2018/2/2/priorities_sports.csv']
+    }, '#priorities-raw');
     createChart('pie',{
         2017: 'data/2017/2/2/secondary_raw.csv',
         2018: 'data/2018/2/2/secondary_raw.csv'
@@ -73,6 +76,18 @@ $(document).ready(function() {
         2017: 'data/2017/2/2/concentration_raw.csv',
         2018: 'data/2018/2/2/concentration_raw.csv'
     }, '#concentration-raw');
+
+    createMultiChart('column', ['Male', 'Female'], null, {
+        2018: ['data/2018/2/2/concentrations_male.csv', 'data/2018/2/2/concentrations_female.csv']
+    }, '#concentration-gender');
+
+    createChart('pie',{
+        2018: 'data/2018/2/2/greek.csv'
+    }, '#greek');
+
+    createMultiChart('column', ['Public', 'Private'], null, {
+        2018: ['data/2018/2/2/greek_public.csv', 'data/2018/2/2/greek_private.csv']
+    }, '#greek-school');
 
     // Athletics
     createChart('pie',{
