@@ -145,6 +145,14 @@ header h1 {
 	background-image: url('../img/lifestyle_right_grey.jpeg');
 }
 
+#yale1 {
+    background-image: url('../img/yale_left.jpg');
+}
+
+#yale2 {
+    background-image: url('../img/yale_right.jpg');
+}
+
 .section-container {
 	width: 1150px;
 	margin: 0 auto;
