@@ -28,11 +28,26 @@ $(document).ready(function() {
     }, '#religion-region');
 
     // Politics
-    // createChart('column','data/2017/3/1/politics_raw.csv', '#politics');
-    // createMultiChart('bar', ['Liberal', 'Moderate', 'Conservative'], null, ['data/2017/3/1/liberal_income.csv', 'data/2017/3/1/moderate_income.csv', 'data/2017/3/1/conservative_income.csv'], '#politics-income');
-    // createMultiChart('bar', ['Liberal', 'Moderate', 'Conservative'], null, ['data/2017/3/1/liberal_religion.csv', 'data/2017/3/1/moderate_religion.csv', 'data/2017/3/1/conservative_religion.csv'], '#politics-religion');
-    // createMultiChart('bar', ['Liberal', 'Moderate', 'Conservative'], null, ['data/2017/3/1/liberal_sexuality.csv', 'data/2017/3/1/moderate_sexuality.csv', 'data/2017/3/1/conservative_sexuality.csv'], '#politics-sexuality');
-    // createMultiChart('bar', ['Liberal', 'Moderate', 'Conservative'], null, ['data/2017/3/1/liberal_race.csv', 'data/2017/3/1/moderate_race.csv', 'data/2017/3/1/conservative_race.csv'], '#politics-ethnicity');
+    createChart('column', {
+        2017: 'data/2017/3/1/politics_raw.csv',
+        2018: 'data/2018/3/1/politics_raw.csv'
+    }, '#politics');
+    createMultiChart('bar', ['Liberal', 'Moderate', 'Conservative'], null, {
+        2017: ['data/2017/3/1/liberal_income.csv', 'data/2017/3/1/moderate_income.csv', 'data/2017/3/1/conservative_income.csv'],
+        2018: ['data/2018/3/1/liberal_income.csv', 'data/2018/3/1/moderate_income.csv', 'data/2018/3/1/conservative_income.csv']
+    }, '#politics-income');
+    createMultiChart('bar', ['Liberal', 'Moderate', 'Conservative'], null, {
+        2017: ['data/2017/3/1/liberal_religion.csv', 'data/2017/3/1/moderate_religion.csv', 'data/2017/3/1/conservative_religion.csv'],
+        2018: ['data/2018/3/1/liberal_religion.csv', 'data/2018/3/1/moderate_religion.csv', 'data/2018/3/1/conservative_religion.csv']
+    }, '#politics-religion');
+    createMultiChart('bar', ['Liberal', 'Moderate', 'Conservative'], null, {
+        2017: ['data/2017/3/1/liberal_sexuality.csv', 'data/2017/3/1/moderate_sexuality.csv', 'data/2017/3/1/conservative_sexuality.csv'],
+        2018: ['data/2018/3/1/liberal_sexuality.csv', 'data/2018/3/1/moderate_sexuality.csv', 'data/2018/3/1/conservative_sexuality.csv']
+    }, '#politics-sexuality');
+    createMultiChart('bar', ['Liberal', 'Moderate', 'Conservative'], null, {
+        2017: ['data/2017/3/1/liberal_race.csv', 'data/2017/3/1/moderate_race.csv', 'data/2017/3/1/conservative_race.csv'],
+        2018: ['data/2018/3/1/liberal_race.csv', 'data/2018/3/1/moderate_race.csv', 'data/2018/3/1/conservative_race.csv']
+    }, '#politics-ethnicity');
 
     // Sex
     createChart('pie', {
@@ -51,10 +66,6 @@ $(document).ready(function() {
         2017: 'data/2017/3/2/sex_partners.csv',
         2018: 'data/2018/3/2/sex_partners.csv'
     }, '#sex-partners');
-    createChart('bar', {
-        2017: 'data/2017/3/2/sex_religion.csv',
-        2018: 'data/2018/3/2/sex_religion.csv'
-    }, '#sex-religion');
     createNumericChart('column', {
         2017: 'data/2017/3/2/partners_gender.csv',
         2018: 'data/2018/3/2/partners_gender.csv'
