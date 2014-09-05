@@ -255,6 +255,8 @@ function createFullerChart(type, titles, colors, filenames, unit, div, startidx,
             pointFormat: '<b>{point.y:.1f}' + unit + '</b><br/>'
         }
     }
+    if (unit == '%')
+        columnOptions.yAxis.ceiling = 100;
 
     var barOptions = {
         xAxis: {
@@ -269,6 +271,8 @@ function createFullerChart(type, titles, colors, filenames, unit, div, startidx,
             pointFormat: '<b>{point.y:.1f}' + unit + '</b><br/>'
         }
     }
+    if (unit == '%')
+        barOptions.yAxis.ceiling = 100;
 
     if (type == 'pie') {
         options = $.extend(options, pieOptions);
