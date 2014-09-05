@@ -125,8 +125,9 @@ function csv_to_scatter(filenamesByYear, id, xlabel, ylabel, color) {
     yearLegend.find("li:contains(" + maxYear + ")").addClass("selected");
 }
 
-function createChart(type, filename, divsel) {
-    createMultiChart(type, null, null, filename, divsel);
+// optional: default_tab
+function createChart(type, filename, divsel, default_tab) {
+    createMultiChart(type, null, null, filename, divsel, default_tab);
 }
 
 function createNumericChart(type, filename, divsel)
@@ -138,14 +139,19 @@ function createChartColor(type, color, filename, divsel) {
     createMultiChart(type, null, [color], filename, divsel);
 }
 
-function createMultiChart(type, titles, colors, filenames, divsel) {
-    createFullChart(type, titles, colors, filenames, '%', divsel)
+// optional: default_tab
+function createMultiChart(type, titles, colors, filenames, divsel, default_tab) {
+    createFullChart(type, titles, colors, filenames, '%', divsel, default_tab)
 }
 
-function createFullChart(type, titlesByYear, colors, filenamesByYear, unit, divsel) {
+// optional: default_tab
+function createFullChart(type, titlesByYear, colors, filenamesByYear, unit, divsel, default_tab) {
     var id = $(divsel).attr("id");
     var yearLegend = makeLegend(Object.keys(filenamesByYear), id, divsel);
-    var maxYear = Math.max.apply(Math, Object.keys(filenamesByYear));
+    if (default_tab === undefined)
+        var maxYear = Math.max.apply(Math, Object.keys(filenamesByYear));
+    else
+        var maxYear = default_tab
 
     var startidx = colorindex;
     $.each(filenamesByYear, function (year, filenames) {
