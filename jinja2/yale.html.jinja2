@@ -1,0 +1,67 @@
+{% extends 'jinja2/_base.html.jinja2' %}
+
+{% block js %}
+    <script src="js/regions.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/charts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/yale.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+{% block nav_items %}
+    <li>Harvard vs. Yale</li>
+{% endblock %}
+
+{% block content %}
+    <div class="intro scroll-row">
+        <div id="subhead">Makeup of the Class</div>
+        <p>FILLME</p>
+        <p>Read Part V of The Crimson's five-part series on the freshman survey <a href="FILLME">here</a>.</p> </div>
+    <div class="scroll-row">
+        <h1>Harvard vs. Yale</h1>
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#gender-tab" data-toggle="tab">Gender</a>
+            </li>
+            <li>
+                <a href="#ea-tab" data-toggle="tab">Early Action</a>
+            </li>
+            <li>
+                <a href="#legacy-tab" data-toggle="tab">Legacy</a>
+            </li>
+            <li>
+                <a href="#greek-tab" data-toggle="tab">Greek Life</a>
+            </li>
+            <li>
+                <a href="#athletics-tab" data-toggle="tab">Athletics</a>
+            </li>
+        </ul>
+        <ul class="tab-panes">
+            <li id="gender-tab" class="active">
+                <h2>Gender</h2>
+                <div id="gender" class="graph"></div>
+                <p>FILLME</p>
+            </li>
+            <li id="ea-tab">
+                <h2>Ethnicity</h2>
+                <div id="ea" class="graph"></div>
+                <p>FILLME</p>
+            </li>
+            <li id="legacy-tab">
+                <h2>Legacy</h2>
+                <div id="legacy" class="graph"></div>
+                <p>FILLME</p>
+            </li>
+            <li id="greek-tab">
+                <h2>Greek Life</h2>
+                <div id="greek" class="graph"></div>
+                <p>FILLME</p>
+            </li>
+            <li id="athletics-tab">
+                <h2>Athletics</h2>
+                <div id="athletics" class="graph"></div>
+                <p>FILLME</p>
+            </li>
+        </ul>
+    </div>
+
+{% endblock %}
