@@ -212,14 +212,23 @@ function createFullerChart(type, titles, colors, filenames, unit, div, startidx,
         title: {
             text: ''
         },
+        plotOptions: {
+            series: {
+                tooltip: {}
+            }
+        }
     };
+
+    if (filenames.length > 1) {
+        options.plotOptions.series.tooltip.headerFormat = '<span style="font-size: 10px">{series.name}</span><br/>';
+    }
 
     for (var i = 0; i < filenames.length; i++) {
         options.series.push({
             data: [],
         });
     }
-
+    
     var pieOptions = {
         plotOptions: {
             pie: {
@@ -255,8 +264,6 @@ function createFullerChart(type, titles, colors, filenames, unit, div, startidx,
             pointFormat: '<b>{point.y:.1f}' + unit + '</b><br/>'
         }
     }
-    if (unit == '%')
-        columnOptions.yAxis.ceiling = 100;
 
     var barOptions = {
         xAxis: {
@@ -271,8 +278,10 @@ function createFullerChart(type, titles, colors, filenames, unit, div, startidx,
             pointFormat: '<b>{point.y:.1f}' + unit + '</b><br/>'
         }
     }
-    if (unit == '%')
+    if (unit == '%') {
         barOptions.yAxis.ceiling = 100;
+        columnOptions.yAxis.ceiling = 100;
+    }
 
     if (type == 'pie') {
         options = $.extend(options, pieOptions);
@@ -299,7 +308,7 @@ function createFullerChart(type, titles, colors, filenames, unit, div, startidx,
             else if (type != 'pie') {
                 options.series[datanum]['color'] = colorset[startidx++ % colorset.length];
             }
-
+            
             // Iterate over the lines and add categories or series
             $.each(lines, function(lineNo, line) {
 
