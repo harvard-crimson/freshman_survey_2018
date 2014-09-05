@@ -44,6 +44,9 @@ $(document).ready(function() {
         2018: 'data/2018/3/2/sex_gender.csv'
     }, '#sex-gender');
     createChart('column', {
+        2018: 'data/2018/3/2/sexual_activity_finalclubs.csv'
+    }, '#sex-final-clubs');
+    createChart('column', {
         2017: 'data/2017/3/2/virginity_loss.csv',
         2018: 'data/2018/3/2/virginity_loss.csv'
     }, '#sex-age');
@@ -82,6 +85,9 @@ $(document).ready(function() {
         2017: 'data/2017/3/3/marijuana_raw.csv',
         2018: 'data/2018/3/3/marijuana_raw.csv'
     }, '#drugs-weed');
+    createChart('column', {
+        2018: 'data/2018/3/3/marijuana_legalization_by_use.csv'
+    }, '#drugs-weed-legal');
     createChart('column', {
         2017: 'data/2017/3/3/other_drugs_raw.csv',
         2018: 'data/2018/3/3/other_drugs_raw.csv'
