@@ -20,7 +20,6 @@ $(document).ready(function() {
     createChart('column','data/3/2/sex_gender.csv', '#sex-gender');
     createChart('column','data/3/2/virginity_loss.csv', '#sex-age');
     createChart('bar','data/3/2/sex_partners.csv', '#sex-partners');
-    createChart('bar','data/3/2/sex_religion.csv', '#sex-religion');
     createNumericChart('column','data/3/2/partners_gender.csv', '#sex-partners-gender');
     createChart('column','data/3/2/sex_religion.csv', '#sex-religion');
     createChart('column','data/3/2/sex_recruited.csv', '#sex-partners-athletes');
