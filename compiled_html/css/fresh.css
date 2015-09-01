@@ -94,6 +94,13 @@ header h1 {
 	padding: 20px 0;
 }
 
+#byline {
+	margin: 0 auto;
+	font: 12pt 'Colaborate Light','Lucida Sans Unicode',sans-serif;
+    color: #999;
+    padding: 5px 0;
+}
+
 .intro {
 	margin: 0 auto;
 	width: 75%;
@@ -164,6 +171,23 @@ header h1 {
 	float: left;
 	margin-bottom: 30px;
 	margin-right: 20px;
+}
+
+.survey-section.disabled {
+	-webkit-filter: saturate(0);
+	-moz-filter: saturate(0);
+	-o-filter: saturate(0);
+	-ms-filter: saturate(0);
+	filter: saturate(0);
+}
+
+.survey-section.disabled .cover {
+	/* Disable hover by making cover already opaque */
+	opacity: 1;
+}
+
+.survey-section.disabled div.card:hover {
+	box-shadow: none;
 }
 
 .survey-section-center {
