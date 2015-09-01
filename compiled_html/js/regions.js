@@ -35,7 +35,7 @@ window.onload = function () {
     us.northeast = path_l;
     us.southeast = path_v;
     us.outside = path_outside;
-    year = "2018";
+    year = "2019";
 
     resize_regions(us);
     for (elt in us) {
@@ -96,8 +96,9 @@ function resize_regions(us) {
             us[elt].transform(t);
         }
 
-        if (year == "")
-            us.outside.hide();
-        else if (year == "2018")
-            us.outside.show();
+        // sould have "outside" data for 2018 and 2019
+        // if (year == "")
+        //     us.outside.hide();
+        // else if (year == "2018")
+        //     us.outside.show();
 }
