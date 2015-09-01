@@ -1,4 +1,27 @@
  $(document).ready(function () {
+    // Narrative
+    // var showNarrative = false;
+    // $('#narrative-button').click(function() {
+    //     if (showNarrative) {
+    //         $('#data')
+    //             .height('initial')
+    //             .css("opacity", 1);
+    //         $('#narrative')
+    //             .height(0)
+    //             .css("opacity", 0);
+    //         $('#narrative-button').html("Read Narrative");
+    //     } else {
+    //         $('#data')
+    //             .height(0)
+    //             .css("opacity", 0);;
+    //         $('#narrative')
+    //             .height('initial')
+    //             .css("opacity", 1);;
+    //         $('#narrative-button').html("See Data");
+    //     }
+    //     showNarrative = !showNarrative;
+    // });
+
     // Makeup of the Class
 
     // Demographics

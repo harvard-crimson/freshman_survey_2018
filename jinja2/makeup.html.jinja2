@@ -7,367 +7,373 @@
     <script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
 
+{% block data_link %}/makeup/{% endblock %}
+{% block narrative_link %}/makeup-narrative/{% endblock %}
+{% block yale_link %}/makeup-yale/{% endblock %}
+
 {% block nav_items %}
     <li>Demographics</li>
     <li>Geography</li>
     <li>Employment</li>
 {% endblock %}
-{% block narrative_link %}http://www.thecrimson.com/article/2014/9/2/freshman-survey-part-i/{% endblock %}
 
 {% block content %}
-    <div class="intro scroll-row">
-        <div id="subhead">Makeup of the Class</div>
-        <p>The Class of 2018 arrives in Cambridge from all walks of life and corners of the country, but a quarter of those surveyed have at least one thing in common: an immediate or extended family member that has walked these brick sidewalks and wood-paneled halls before. Of the students who have had a relative attend Harvard College, 16 percent are considered legacies, meaning they have at least one parent who attended the College and, according to the admissions office, could have gotten a leg up in the admissions process because of it. As a whole, The Crimson's survey of roughly 70 percent of incoming freshmen reveals a class that is in line with trends toward greater ethnic diversity, high combined family income, and shifting career ambitions.</p>
-        <p>Read Part I of The Crimson's five-part series on the freshman survey <a href="http://www.thecrimson.com/article/2014/9/2/freshman-survey-part-i/">here</a>.</p> </div>
-    <div class="scroll-row">
-        <h1>Demographics</h1>
-        <ul class="nav nav-tabs">
-            <li class="active">
-                <a href="#gender-tab" data-toggle="tab">Gender</a>
-            </li>
-            <li>
-                <a href="#race-tab" data-toggle="tab">Ethnicity</a>
-            </li>
-            <li>
-                <a href="#athletics-tab" data-toggle="tab">Athletes</a>
-            </li>
-            <li>
-                <a href="#athletes-vs-income-tab" data-toggle="tab">Athletes' Family Incomes</a>
-            </li>
-            <li>
-                <a href="#sexuality-tab" data-toggle="tab">Sexual Orientation</a>
-            </li>
-            <li>
-                <a href="#birth-order-tab" data-toggle="tab">Birth Order</a>
-            </li>
-            <li>
-                <a href="#school-type-tab" data-toggle="tab">Secondary School</a>
-            </li>
-            <li>
-                <a href="#legacy-community-tab" data-toggle="tab">Legacy by Community</a>
-            </li>
-            <li>
-                <a href="#legacy-income-tab" data-toggle="tab">Legacy by Income</a>
-            </li>
-            <li>
-                <a href="#legacy-tab" data-toggle="tab">Legacy</a>
-            </li>
-            <li>
-                <a href="#legacy-secondary-school-tab" data-toggle="tab">Legacy by Secondary School</a>
-            </li>
-        </ul>
-        <ul class="tab-panes">
-            <li id="gender-tab" class="active">
-                <h2>Gender</h2>
-                <div id="gender" class="graph"></div>
-                <p>While data from last year&rsquo;s survey showed that the Class of 2017 was evenly split between males and females, 53 percents of respondents said they are male. Dean of Admissions and Financial Aid William R. Fitzsimmons &rsquo;67 said in March that the College had admitted more men than women for the Class of 2018.</p>
-            </li>
-            <li id="race-tab">
-                <h2>Ethnicity</h2>
-                <div id="race" class="graph"></div>
-                <p>White students make up the largest portion of the Class of 2018—62 percent of respondents identified as such. Twenty-nine percent of respondents identified as Asian, including people of Indian descent. The data indicates that the ethnic composition of the Class of 2018 is largely congruent to that of the Class of 2017.</p>
-            </li>
-            <li id="athletics-tab">
-                <h2>Athletics</h2>
-                <div id="athletes-raw" class="graph"></div>
-                <p>Nearly 20 percent of those surveyed in the Class of 2018 intend to play varsity sports at Harvard. In addition to the 11 percent of respondents who said they were recruited athletes, 9 percent plan to walk on to a varsity team. Harvard does not offer athletic scholarships to recruited athletes or give out merit scholarships of any kind.</p>
-            </li>
-            <li id="athletes-vs-income-tab">
-                <h2>Recruited Athletes by Family Income</h2>
-                <div id="athletes-vs-income" class="graph"></div>
-                <p>Freshmen who reported higher family incomes were more likely to be a recruited athlete. While 11 percent of survey respondents said they are a recruited athlete, 16 percent of freshmen reporting a combined parental income above $500,000 said they are a recruited athlete. Only 1 percent of freshmen reporting a combined parental income below $40,000 said they are a recruited athlete.</p>
-            </li>
-            <li id="sexuality-tab">
-                <h2>Sexuality</h2>
-                <div id="sexual-orientation" class="graph"></div>
-                <p>Ten percent of the incoming freshman class did not identify themselves as heterosexual. Of those who did not identify as heterosexual, 38 percent of respondents identified themselves as homosexual, while 26 percent identified themselves as bisexual.</p>
-            </li>
-            <li id="birth-order-tab">
-                <h2>Birth Order</h2>
-                <div id="birth-order" class="graph"></div>
-                <p>Similarly to data from last year’s survey, oldest children constitute a plurality of those in the Class of 2018. Forty-two percent of survey respondents reported that they are the eldest child in their family. Youngest children make up 29 percent of survey respondents, while only 15 percent reported they are an only child.</p>
-            </li>
-            <li id="school-type-tab">
-                <h2>Secondary School</h2>
-                <div id="school-type" class="graph"></div>
-                <p>Sixty-one percent of surveyed freshmen said they attended a public high school, with the overwhelming majority of them at a non-charter school. Thirty-eight percent said they went to a private secondary school, with three quarters of those respondents saying they attended a non-denominational private school.</p>
-            </li>
-            <li id="legacy-community-tab">
-                <h2>Legacy by Community</h2>
-                <div id="legacy-community" class="graph"></div>
-                <p>Twenty-one percent of survey respondents from urban areas reported that they had at least one parent attend Harvard College, compared to 16 percent of the entire freshman class. Only 8 percent of rural residents indicated that either parent was a Harvard undergraduate.</p>
-            </li>
-            <li id="legacy-income-tab">
-                <h2>Legacy by Family Income</h2>
-                <div id="legacy-income" class="graph"></div>
-                <p>Freshmen who reported higher family incomes were more likely to have a parent who once attended Harvard College. No surveyed freshman with a parental income of less than $40,000 said that his or her parent went to Harvard College, while 37 percent of those with a parental income of more than $500,000 said that at least one of their parents went to Harvard College. According to the College’s website, applicants with at least one parent alumnus “may receive an additional look” in the admissions process.</p>
-            </li>
-            <li id="legacy-tab">
-                <h2>Legacy</h2>
-                <div id="legacy" class="graph"></div>
-                <p>Twenty-seven percent of respondents said that they someone in their immediate or extended family attended Harvard College. Close to 16 percent reported that at least one of their parents was a Harvard Undergraduate, thus they are considered legacies by the College. Applications from members of this group “may receive an additional look” in the admissions process, according to the College.</p>
-            </li>
-            <li id="legacy-secondary-school-tab">
-                <h2>Legacy by Secondary School</h2>
-                <div id="legacy-secondary-school" class="graph"></div>
-                <p>Twenty-two percent of respondents who attended a private secondary school said at least one of their parents attended Harvard College. Only 12 percent of respondents attended a public secondary school said the same.</p>
-            </li>
-        </ul>
-    </div>
+    <div id="data" style="
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.3s;">
+        <div class="intro scroll-row">
+            <div id="subhead">Makeup of the Class</div>
+            <p>The Class of 2018 arrives in Cambridge from all walks of life and corners of the country, but a quarter of those surveyed have at least one thing in common: an immediate or extended family member that has walked these brick sidewalks and wood-paneled halls before. Of the students who have had a relative attend Harvard College, 16 percent are considered legacies, meaning they have at least one parent who attended the College and, according to the admissions office, could have gotten a leg up in the admissions process because of it. As a whole, The Crimson's survey of roughly 70 percent of incoming freshmen reveals a class that is in line with trends toward greater ethnic diversity, high combined family income, and shifting career ambitions.</p>
+            <p>Read Part I of The Crimson's five-part series on the freshman survey <a href="http://www.thecrimson.com/article/2014/9/2/freshman-survey-part-i/">here</a>.</p> </div>
+        <div class="scroll-row">
+            <h1>Demographics</h1>
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#gender-tab" data-toggle="tab">Gender</a>
+                </li>
+                <li>
+                    <a href="#race-tab" data-toggle="tab">Ethnicity</a>
+                </li>
+                <li>
+                    <a href="#athletics-tab" data-toggle="tab">Athletes</a>
+                </li>
+                <li>
+                    <a href="#athletes-vs-income-tab" data-toggle="tab">Athletes' Family Incomes</a>
+                </li>
+                <li>
+                    <a href="#sexuality-tab" data-toggle="tab">Sexual Orientation</a>
+                </li>
+                <li>
+                    <a href="#birth-order-tab" data-toggle="tab">Birth Order</a>
+                </li>
+                <li>
+                    <a href="#school-type-tab" data-toggle="tab">Secondary School</a>
+                </li>
+                <li>
+                    <a href="#legacy-community-tab" data-toggle="tab">Legacy by Community</a>
+                </li>
+                <li>
+                    <a href="#legacy-income-tab" data-toggle="tab">Legacy by Income</a>
+                </li>
+                <li>
+                    <a href="#legacy-tab" data-toggle="tab">Legacy</a>
+                </li>
+                <li>
+                    <a href="#legacy-secondary-school-tab" data-toggle="tab">Legacy by Secondary School</a>
+                </li>
+            </ul>
+            <ul class="tab-panes">
+                <li id="gender-tab" class="active">
+                    <h2>Gender</h2>
+                    <div id="gender" class="graph"></div>
+                    <p>While data from last year&rsquo;s survey showed that the Class of 2017 was evenly split between males and females, 53 percents of respondents said they are male. Dean of Admissions and Financial Aid William R. Fitzsimmons &rsquo;67 said in March that the College had admitted more men than women for the Class of 2018.</p>
+                </li>
+                <li id="race-tab">
+                    <h2>Ethnicity</h2>
+                    <div id="race" class="graph"></div>
+                    <p>White students make up the largest portion of the Class of 2018—62 percent of respondents identified as such. Twenty-nine percent of respondents identified as Asian, including people of Indian descent. The data indicates that the ethnic composition of the Class of 2018 is largely congruent to that of the Class of 2017.</p>
+                </li>
+                <li id="athletics-tab">
+                    <h2>Athletics</h2>
+                    <div id="athletes-raw" class="graph"></div>
+                    <p>Nearly 20 percent of those surveyed in the Class of 2018 intend to play varsity sports at Harvard. In addition to the 11 percent of respondents who said they were recruited athletes, 9 percent plan to walk on to a varsity team. Harvard does not offer athletic scholarships to recruited athletes or give out merit scholarships of any kind.</p>
+                </li>
+                <li id="athletes-vs-income-tab">
+                    <h2>Recruited Athletes by Family Income</h2>
+                    <div id="athletes-vs-income" class="graph"></div>
+                    <p>Freshmen who reported higher family incomes were more likely to be a recruited athlete. While 11 percent of survey respondents said they are a recruited athlete, 16 percent of freshmen reporting a combined parental income above $500,000 said they are a recruited athlete. Only 1 percent of freshmen reporting a combined parental income below $40,000 said they are a recruited athlete.</p>
+                </li>
+                <li id="sexuality-tab">
+                    <h2>Sexuality</h2>
+                    <div id="sexual-orientation" class="graph"></div>
+                    <p>Ten percent of the incoming freshman class did not identify themselves as heterosexual. Of those who did not identify as heterosexual, 38 percent of respondents identified themselves as homosexual, while 26 percent identified themselves as bisexual.</p>
+                </li>
+                <li id="birth-order-tab">
+                    <h2>Birth Order</h2>
+                    <div id="birth-order" class="graph"></div>
+                    <p>Similarly to data from last year’s survey, oldest children constitute a plurality of those in the Class of 2018. Forty-two percent of survey respondents reported that they are the eldest child in their family. Youngest children make up 29 percent of survey respondents, while only 15 percent reported they are an only child.</p>
+                </li>
+                <li id="school-type-tab">
+                    <h2>Secondary School</h2>
+                    <div id="school-type" class="graph"></div>
+                    <p>Sixty-one percent of surveyed freshmen said they attended a public high school, with the overwhelming majority of them at a non-charter school. Thirty-eight percent said they went to a private secondary school, with three quarters of those respondents saying they attended a non-denominational private school.</p>
+                </li>
+                <li id="legacy-community-tab">
+                    <h2>Legacy by Community</h2>
+                    <div id="legacy-community" class="graph"></div>
+                    <p>Twenty-one percent of survey respondents from urban areas reported that they had at least one parent attend Harvard College, compared to 16 percent of the entire freshman class. Only 8 percent of rural residents indicated that either parent was a Harvard undergraduate.</p>
+                </li>
+                <li id="legacy-income-tab">
+                    <h2>Legacy by Family Income</h2>
+                    <div id="legacy-income" class="graph"></div>
+                    <p>Freshmen who reported higher family incomes were more likely to have a parent who once attended Harvard College. No surveyed freshman with a parental income of less than $40,000 said that his or her parent went to Harvard College, while 37 percent of those with a parental income of more than $500,000 said that at least one of their parents went to Harvard College. According to the College’s website, applicants with at least one parent alumnus “may receive an additional look” in the admissions process.</p>
+                </li>
+                <li id="legacy-tab">
+                    <h2>Legacy</h2>
+                    <div id="legacy" class="graph"></div>
+                    <p>Twenty-seven percent of respondents said that they someone in their immediate or extended family attended Harvard College. Close to 16 percent reported that at least one of their parents was a Harvard Undergraduate, thus they are considered legacies by the College. Applications from members of this group “may receive an additional look” in the admissions process, according to the College.</p>
+                </li>
+                <li id="legacy-secondary-school-tab">
+                    <h2>Legacy by Secondary School</h2>
+                    <div id="legacy-secondary-school" class="graph"></div>
+                    <p>Twenty-two percent of respondents who attended a private secondary school said at least one of their parents attended Harvard College. Only 12 percent of respondents attended a public secondary school said the same.</p>
+                </li>
+            </ul>
+        </div>
 
-    <div id="TheCrimson_AllArticles_ATF_300x250" class="box ad">
-        <script type='text/javascript'>
-            googletag.cmd.push(function() { googletag.display('TheCrimson_AllArticles_ATF_300x250'); });
-        </script>
-    </div>
+        <div id="TheCrimson_AllArticles_ATF_300x250" class="box ad">
+            <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('TheCrimson_AllArticles_ATF_300x250'); });
+            </script>
+        </div>
 
-    <div class="scroll-row" id="regions">
-        <h1>Geography</h1>
-        <ul class="nav nav-tabs">
-            <li class="active">
-                <a href="#regions-outer" data-toggle="tab">Demographics</a>
-            </li>
-            <li>
-                <a href="#urbanity-tab" data-toggle="tab">Community Type</a>
-            </li>
-        </ul>
-        <ul class="tab-panes">
-            <li id="regions-outer" class="active">
-                <div id="regions-inner" class="clearfix">
-                    <ul class="year-switch">
-                        <div class="year-switch-option" data-year="">2017</div><div
-                            class="year-switch-option selected" data-year="2018">2018</div>
-                    </ul>
-                    <div id="paper">
-                        <p>Forty-three percent of incoming freshmen come from the Northeast, with Westerners, Southwesterners, Southeasterners, and Midwesterners following in descending order. An additional 12 percent of surveyed freshmen hail from abroad.</p>
-                        <p><strong>CORRECTION: September 2, 2014</strong><br>An earlier version of the caption accompanying a graphic examining the geographic origins of the Class of 2018 incorrectly stated the percentage of surveyed students who reported being from the Northeast. In fact, 43 percent of respondents are from the Northeast. The caption also incorrectly stated that more respondents hailed from the Midwest than the Southwest and Southeast. In fact, the Midwest trailed all other regions.</p>
-                    </div>
-                    <div id="regions-right">
-                        <h2>Mouse over region to see data.</h2>
-                        <div id="northeast" class="region">
-                            <h3>
-                                <div class="region-stat">41.1%</div>
-                                of students are from the Northeast.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">73.4%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">88.7%</div>
-                                of students from the Northeast expect to return after graduating.
-                            </h3>
+        <div class="scroll-row" id="regions">
+            <h1>Geography</h1>
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#regions-outer" data-toggle="tab">Demographics</a>
+                </li>
+                <li>
+                    <a href="#urbanity-tab" data-toggle="tab">Community Type</a>
+                </li>
+            </ul>
+            <ul class="tab-panes">
+                <li id="regions-outer" class="active">
+                    <div id="regions-inner" class="clearfix">
+                        <ul class="year-switch">
+                            <div class="year-switch-option" data-year="">2017</div><div
+                                class="year-switch-option selected" data-year="2018">2018</div>
+                        </ul>
+                        <div id="paper">
+                            <p>Forty-three percent of incoming freshmen come from the Northeast, with Westerners, Southwesterners, Southeasterners, and Midwesterners following in descending order. An additional 12 percent of surveyed freshmen hail from abroad.</p>
+                            <p><strong>CORRECTION: September 2, 2014</strong><br>An earlier version of the caption accompanying a graphic examining the geographic origins of the Class of 2018 incorrectly stated the percentage of surveyed students who reported being from the Northeast. In fact, 43 percent of respondents are from the Northeast. The caption also incorrectly stated that more respondents hailed from the Midwest than the Southwest and Southeast. In fact, the Midwest trailed all other regions.</p>
                         </div>
-                        <div id="southeast" class="region">
-                            <h3>
-                                <div class="region-stat">11.7%</div>
-                                of students are from the Southeast.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">2.5%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">12.2%</div>
-                                of students from the Southeast expect to return after graduating.
-                            </h3>
-                        </div>
-                        <div id="midwest" class="region">
-                            <h3>
-                                <div class="region-stat">13.8%</div>
-                                of students are from the Midwest.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">2.6%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">18.6%</div>
-                                of students from the Midwest expect to return after graduating.
-                            </h3>
-                        </div>
-                        <div id="southwest" class="region">
-                            <h3>
-                                <div class="region-stat">7.8%</div>
-                                of students are from the Southwest.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">1.3%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">10.0%</div>
-                                of students from the Southwest expect to return after graduating.
-                            </h3>
-                        </div>
-                        <div id="west" class="region">
-                            <h3>
-                                <div class="region-stat">14.5%</div>
-                                of students are from the West.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">10.7%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">42.2%</div>
-                                of students from the West expect to return after graduating.
-                            </h3>
+                        <div id="regions-right">
+                            <h2>Mouse over region to see data.</h2>
+                            <div id="northeast" class="region">
+                                <h3>
+                                    <div class="region-stat">41.1%</div>
+                                    of students are from the Northeast.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">73.4%</div>
+                                    of students plan to live there after college.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">88.7%</div>
+                                    of students from the Northeast expect to return after graduating.
+                                </h3>
+                            </div>
+                            <div id="southeast" class="region">
+                                <h3>
+                                    <div class="region-stat">11.7%</div>
+                                    of students are from the Southeast.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">2.5%</div>
+                                    of students plan to live there after college.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">12.2%</div>
+                                    of students from the Southeast expect to return after graduating.
+                                </h3>
+                            </div>
+                            <div id="midwest" class="region">
+                                <h3>
+                                    <div class="region-stat">13.8%</div>
+                                    of students are from the Midwest.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">2.6%</div>
+                                    of students plan to live there after college.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">18.6%</div>
+                                    of students from the Midwest expect to return after graduating.
+                                </h3>
+                            </div>
+                            <div id="southwest" class="region">
+                                <h3>
+                                    <div class="region-stat">7.8%</div>
+                                    of students are from the Southwest.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">1.3%</div>
+                                    of students plan to live there after college.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">10.0%</div>
+                                    of students from the Southwest expect to return after graduating.
+                                </h3>
+                            </div>
+                            <div id="west" class="region">
+                                <h3>
+                                    <div class="region-stat">14.5%</div>
+                                    of students are from the West.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">10.7%</div>
+                                    of students plan to live there after college.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">42.2%</div>
+                                    of students from the West expect to return after graduating.
+                                </h3>
+                            </div>                              
+
+
+
+                            <div id="northeast2018" class="region">
+                                <h3>
+                                    <div class="region-stat">43.1%</div>
+                                    of students are from the Northeast.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">70.7%</div>
+                                    of students plan to live there after college.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">34.7%</div>
+                                    of students from the Northeast have a relative that went to Harvard College.
+                                </h3>
+                            </div>
+                            <div id="southeast2018" class="region">
+                                <h3>
+                                    <div class="region-stat">10.6%</div>
+                                    of students are from the Southeast.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">2.6%</div>
+                                    of students plan to live there after college.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">20.3%</div>
+                                    of students from the Southeast have a relative that went to Harvard College.
+                                </h3>
+                            </div>
+                            <div id="midwest2018" class="region">
+                                <h3>
+                                    <div class="region-stat">11.0%</div>
+                                    of students are from the Midwest.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">2.3%</div>
+                                    of students plan to live there after college.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">22.8%</div>
+                                    of students from the Midwest have a relative that went to Harvard College.
+                                </h3>
+                            </div>
+                            <div id="southwest2018" class="region">
+                                <h3>
+                                    <div class="region-stat">6.8%</div>
+                                    of students are from the Southwest.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">2.4%</div>
+                                    of students plan to live there after college.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">21.8%</div>
+                                    of students from the Southwest have a relative that went to Harvard College.
+                                </h3>
+                            </div>
+                            <div id="west2018" class="region">
+                                <h3>
+                                    <div class="region-stat">16.9%</div>
+                                    of students are from the West.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">14.2%</div>
+                                    of students plan to live there after college.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">24.6%</div>
+                                    of students from the West have a relative that went to Harvard College.
+                                </h3>
+                            </div>
+                            <div id="outside2018" class="region">
+                                <h3>
+                                    <div class="region-stat">11.6%</div>
+                                    of students are from outide the US.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">7.8%</div>
+                                    of students plan to live there after college.
+                                </h3>
+                                <h3>
+                                    <div class="region-stat">14.9%</div>
+                                    of students from outside the US have a relative that went to Harvard College.
+                                </h3>
+                            </div>
                         </div>                              
+                    </div>
+                </li>
+                <li id="urbanity-tab">
+                    <h2>Community Type</h2>
+                    <div id="urbanity"></div>
+                    <p>Sixty-four percent of surveyed freshmen come from a suburban community, with urban and rural residents following at 28 and 8 percent, respectively. In comparison, 71 percent of Americans surveyed in the 2010 U.S. census reported that they live in cities, 10 percent in suburbs, and 19 percent in rural regions.</p>
+                </li>
+            </ul>
+        </div>
 
+        <div id="TheCrimson_AllArticles_BTF_300x250" class="box ad">
+            <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('TheCrimson_AllArticles_BTF_300x250'); });
+            </script>
+        </div>
 
-
-                        <div id="northeast2018" class="region">
-                            <h3>
-                                <div class="region-stat">43.1%</div>
-                                of students are from the Northeast.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">70.7%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">34.7%</div>
-                                of students from the Northeast have a relative that went to Harvard College.
-                            </h3>
-                        </div>
-                        <div id="southeast2018" class="region">
-                            <h3>
-                                <div class="region-stat">10.6%</div>
-                                of students are from the Southeast.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">2.6%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">20.3%</div>
-                                of students from the Southeast have a relative that went to Harvard College.
-                            </h3>
-                        </div>
-                        <div id="midwest2018" class="region">
-                            <h3>
-                                <div class="region-stat">11.0%</div>
-                                of students are from the Midwest.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">2.3%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">22.8%</div>
-                                of students from the Midwest have a relative that went to Harvard College.
-                            </h3>
-                        </div>
-                        <div id="southwest2018" class="region">
-                            <h3>
-                                <div class="region-stat">6.8%</div>
-                                of students are from the Southwest.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">2.4%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">21.8%</div>
-                                of students from the Southwest have a relative that went to Harvard College.
-                            </h3>
-                        </div>
-                        <div id="west2018" class="region">
-                            <h3>
-                                <div class="region-stat">16.9%</div>
-                                of students are from the West.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">14.2%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">24.6%</div>
-                                of students from the West have a relative that went to Harvard College.
-                            </h3>
-                        </div>
-                        <div id="outside2018" class="region">
-                            <h3>
-                                <div class="region-stat">11.6%</div>
-                                of students are from outide the US.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">7.8%</div>
-                                of students plan to live there after college.
-                            </h3>
-                            <h3>
-                                <div class="region-stat">14.9%</div>
-                                of students from outside the US have a relative that went to Harvard College.
-                            </h3>
-                        </div>
-                    </div>                              
-                </div>
-            </li>
-            <li id="urbanity-tab">
-                <h2>Community Type</h2>
-                <div id="urbanity"></div>
-                <p>Sixty-four percent of surveyed freshmen come from a suburban community, with urban and rural residents following at 28 and 8 percent, respectively. In comparison, 71 percent of Americans surveyed in the 2010 U.S. census reported that they live in cities, 10 percent in suburbs, and 19 percent in rural regions.</p>
-            </li>
-        </ul>
-    </div>
-
-    <div id="TheCrimson_AllArticles_BTF_300x250" class="box ad">
-        <script type='text/javascript'>
-            googletag.cmd.push(function() { googletag.display('TheCrimson_AllArticles_BTF_300x250'); });
-        </script>
-    </div>
-
-    <div class="scroll-row" id="salary">
-        <h1>Employment</h1>
-        <ul class="nav nav-tabs">
-            <li class="active">
-                <a href="#starting-salary-tab" data-toggle="tab">Starting Salary</a>
-            </li>
-            <li>
-                <a href="#starting-salary-vs-gender-tab" data-toggle="tab">Starting Salary by Gender</a>
-            </li>
-            <li>
-                <a href="#sector-start-over-time-tab" data-toggle="tab">Field</a>
-            </li>
-            <li>
-                <a href="#sector-start-by-gender-tab" data-toggle="tab">Field by Gender</a>
-            </li>
-            <li>
-                <a href="#sector-start-by-school-type-tab" data-toggle="tab">Field by Secondary School</a>
-            </li>
-        </ul>
-        <ul class="tab-panes">
-            <li id="starting-salary-tab" class="active">
-                <h2>Anticipated Starting Salary</h2>
-                <div id="starting-salary" class="graph"></div>
-                <p>Half of the Class of 2018 expects to earn a starting salary of between $50,000 and $90,000 right after graduation. The majority of the remaining half expects salaries below $50,000 that first year. Forty-two percent of respondents said they expect to earn a starting salary greater than $70,000. Only 38 percent of respondents to last year’s Class of 2017 survey said they expected to earn such a salary.</p>
-            </li>
-            <li id="starting-salary-vs-gender-tab">
-                <h2>Anticipated Starting Salary by Gender</h2>
-                <div id="starting-salary-vs-gender" class="graph"></div>
-                <p>Surveyed male freshmen anticipate a significantly higher starting salary than their female counterparts across income brackets.</p>
-                <p> At the lower end, 11 percent of women and 6 percent of men said they anticipate making less than $30,000 immediately after graduation.</p>
-<p>At the upper end, 5 percent of female freshman respondents and 11 percent of male freshman respondents said they anticipate earning more than $110,000 immediately after graduation.</p>
-
-</p>
-            </li>
-            <li id="sector-start-over-time-tab">
-                <h2>Comparison of Anticipated Employment Field Immediately After Graduation and Ten Years Out</h2>
-                <div id="sector-start-over-time" class="graph"></div>
-                <p>Many surveyed freshmen said they expect their immediate post-graduate job to be different from their career 10 years down the line. For example, while just 4 percent of surveyed freshmen said they plan to work in government or politics immediately after graduation, 13 percent of them said they anticipate doing so in 2028.</p>
-            </li>
-            <li id="sector-start-by-gender-tab">
-                <h2>Anticipated Employment Field by Gender</h2>
-                <div id="sector-start-by-gender" class="graph"></div>
-                <p>Like those surveyed in last year’s freshman survey, female freshmen are less likely than their male counterparts to see themselves in a job related to entrepreneurship or finance after they graduate. They were more likely than men to envision themselves going to graduate or professional school and pursuing jobs in health and media or publishing.</p>
-            </li>
-            <li id="sector-start-by-school-type-tab">
-                <h2>Anticipated Post-Graduate Occupation by Secondary School Type</h2>
-                <div id="sector-start-by-school-type" class="graph"></div>
-                <p>Surveyed freshmen who attended public high school were more likely than their private-school counterparts to say they plan to go to graduate school or professional school after College. They are also more likely to pursue a job in the public sector, with 5 percent saying they plan on working in government or politics after graduation. On the other hand, those from private school backgrounds were more likely to say they would pursue a job in finance following graduation.</p>
-            </li>
-        </ul>
+        <div class="scroll-row" id="salary">
+            <h1>Employment</h1>
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#starting-salary-tab" data-toggle="tab">Starting Salary</a>
+                </li>
+                <li>
+                    <a href="#starting-salary-vs-gender-tab" data-toggle="tab">Starting Salary by Gender</a>
+                </li>
+                <li>
+                    <a href="#sector-start-over-time-tab" data-toggle="tab">Field</a>
+                </li>
+                <li>
+                    <a href="#sector-start-by-gender-tab" data-toggle="tab">Field by Gender</a>
+                </li>
+                <li>
+                    <a href="#sector-start-by-school-type-tab" data-toggle="tab">Field by Secondary School</a>
+                </li>
+            </ul>
+            <ul class="tab-panes">
+                <li id="starting-salary-tab" class="active">
+                    <h2>Anticipated Starting Salary</h2>
+                    <div id="starting-salary" class="graph"></div>
+                    <p>Half of the Class of 2018 expects to earn a starting salary of between $50,000 and $90,000 right after graduation. The majority of the remaining half expects salaries below $50,000 that first year. Forty-two percent of respondents said they expect to earn a starting salary greater than $70,000. Only 38 percent of respondents to last year’s Class of 2017 survey said they expected to earn such a salary.</p>
+                </li>
+                <li id="starting-salary-vs-gender-tab">
+                    <h2>Anticipated Starting Salary by Gender</h2>
+                    <div id="starting-salary-vs-gender" class="graph"></div>
+                    <p>Surveyed male freshmen anticipate a significantly higher starting salary than their female counterparts across income brackets.</p>
+                    <p> At the lower end, 11 percent of women and 6 percent of men said they anticipate making less than $30,000 immediately after graduation.</p>
+                    <p>At the upper end, 5 percent of female freshman respondents and 11 percent of male freshman respondents said they anticipate earning more than $110,000 immediately after graduation.</p>
+                </li>
+                <li id="sector-start-over-time-tab">
+                    <h2>Comparison of Anticipated Employment Field Immediately After Graduation and Ten Years Out</h2>
+                    <div id="sector-start-over-time" class="graph"></div>
+                    <p>Many surveyed freshmen said they expect their immediate post-graduate job to be different from their career 10 years down the line. For example, while just 4 percent of surveyed freshmen said they plan to work in government or politics immediately after graduation, 13 percent of them said they anticipate doing so in 2028.</p>
+                </li>
+                <li id="sector-start-by-gender-tab">
+                    <h2>Anticipated Employment Field by Gender</h2>
+                    <div id="sector-start-by-gender" class="graph"></div>
+                    <p>Like those surveyed in last year’s freshman survey, female freshmen are less likely than their male counterparts to see themselves in a job related to entrepreneurship or finance after they graduate. They were more likely than men to envision themselves going to graduate or professional school and pursuing jobs in health and media or publishing.</p>
+                </li>
+                <li id="sector-start-by-school-type-tab">
+                    <h2>Anticipated Post-Graduate Occupation by Secondary School Type</h2>
+                    <div id="sector-start-by-school-type" class="graph"></div>
+                    <p>Surveyed freshmen who attended public high school were more likely than their private-school counterparts to say they plan to go to graduate school or professional school after College. They are also more likely to pursue a job in the public sector, with 5 percent saying they plan on working in government or politics after graduation. On the other hand, those from private school backgrounds were more likely to say they would pursue a job in finance following graduation.</p>
+                </li>
+            </ul>
+        </div>
     </div>
 
 {% endblock %}

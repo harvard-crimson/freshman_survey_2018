@@ -1,79 +1,107 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-		<title>The Harvard Crimson | Class of 2019 By the Numbers</title>
+        <title>The Harvard Crimson | Class of 2019 By the Numbers</title>
 
-		{# <base href="http://features.thecrimson.com/2014/freshman-survey/"> #}
+        {# <base href="http://features.thecrimson.com/2014/freshman-survey/"> #}
         <base href="http://52.4.112.243:81/">
 
-		<link href="http://fonts.googleapis.com/css?family=Lato:400,700|Crimson|Colaborate" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" type="text/css" href="css/fresh.css">
-		<link rel="stylesheet" type="text/css" href="css/fonts.css">
-		<link rel="stylesheet" type="text/css" href="css/nv.d3.css">
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,700|Crimson|Colaborate" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/fresh.css">
+        <link rel="stylesheet" type="text/css" href="css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="css/nv.d3.css">
 
-		<script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=thecrimson" type="text/javascript"></script>
-		<script src="js/jquery-csv.min.js"></script>
-		<script src="js/jquery.affix.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/jquery.tabs.js" type="text/javascript" charset="utf-8"></script>
+        <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=thecrimson" type="text/javascript"></script>
+        <script src="js/jquery-csv.min.js"></script>
+        <script src="js/jquery.affix.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/jquery.tabs.js" type="text/javascript" charset="utf-8"></script>
 
-		<script src="js/highcharts.js"></script>
-		<script src="js/highcharts-more.js"></script>
-		<script src="js/tracking.js"></script>
-		<script src="js/raphael.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/regions.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/debounce.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/d3.v3.js"></script>
-		<script src="js/fisheye.js"></script>
-		<script src="js/nv.d3.min.js"></script>
-		<script src="js/utils.js"></script>
-		<script src="js/legend.js"></script>
-		<script src="js/scatter.js"></script>
+        <script src="js/highcharts.js"></script>
+        <script src="js/highcharts-more.js"></script>
+        <script src="js/tracking.js"></script>
+        <script src="js/raphael.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/regions.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/debounce.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/d3.v3.js"></script>
+        <script src="js/fisheye.js"></script>
+        <script src="js/nv.d3.min.js"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/legend.js"></script>
+        <script src="js/scatter.js"></script>
 
-		{% block js %}{% endblock %}
-	</head>
+        {% block js %}{% endblock %}
+    </head>
 
-	<body>
-		<header>
-			<div class="wrapper">
-				<a class="header-logo" href="http://www.thecrimson.com/">
-					<img src="img/logo.png" height="18" width="215" />
-				</a>
-				<ul class="header-nav">
-					<a href=""><li{% if filename=='index' %} class="active"{% endif %}>Introduction</li></a>
-                    <a href="makeup/"><li{% if filename=='makeup' %} class="active"{% endif %}>Makeup of the Class</li></a>
-                    <a href="admissions/"><li{% if filename=='admissions' %} class="active"{% endif %}>Admissions</li></a>
-                    <a href="academics/"><li{% if filename=='academics' %} class="active"{% endif %}>Academics/Extracurriculars</li></a>
-                    <a href="lifestyle/"><li{% if filename=='lifestyle' %} class="active"{% endif %}>Beliefs/Lifestyle</li></a>
-                    <a href="yale/"><li{% if filename=='yale' %} class="active"{% endif %}>Yale</li></a>
-				</ul>
-			</div>
-		</header>
+    <body>
+        <header>
+            <div class="wrapper">
+                <a class="header-logo" href="http://www.thecrimson.com/">
+                    <img src="img/logo.png" height="18" width="215" />
+                </a>
+                <ul class="header-nav">
+                    <a href="">          <li{% if 'index'     in filename %} class="active"{% endif %}>Introduction</li></a>
+                    <a href="makeup/">   <li{% if 'makeup'    in filename %} class="active"{% endif %}>Class Makeup &amp; Admissions</li></a>
+                    <a href="academics/"><li{% if 'academics' in filename %} class="active"{% endif %}>Academics &amp; Extracurriculars</li></a>
+                    <a href="lifestyle/"><li{% if 'lifestyle' in filename %} class="active"{% endif %}>Beliefs &amp; Lifestyle</li></a>
+                </ul>
+            </div>
+        </header>
 
-		<img class="full-width" src='img/cover.jpg'>
+        {% block cover_image %}<img class="full-width" src='img/cover.jpg'>{% endblock %}
 
-		<div class="wrapper">
-			<div id="subnav">
-				<ul>
-                    {% block nav_items %}{% endblock %}
-                    {% if filename != "index" %}<li><a href="{% block narrative_link %}{% endblock %}"><span id="narrative-button">Read Narrative</span></a></li>{% endif %}
-				</ul>
-			</div>
-			<div id="main">
+        <div class="wrapper">
+            {% block subnav %}
+                {% if filename != "index" %}
+                {% set is_data = (not 'narrative' in filename) and (not 'yale' in filename) %}
+                {% set is_narrative = 'narrative' in filename %}
+                {% set is_yale = 'yale' in filename %}
+                <div id="topicnav">
+                    <ul>
+                        <li {% if is_data %}id="subnav"{% endif %}>
+                            <a href="{% block data_link %}{% endblock %}">
+                                <span id="data-button">{% if is_data %}The Data{% else %}See Data{% endif %}</span>
+                            </a>
+                            <ul>
+                                {% block nav_items %}{% endblock %}
+                            </ul>
+                        </li>
+                        <li {% if is_narrative %}id="subnav"{% endif %}>
+                            <a href="{% block narrative_link %}{% endblock %}">
+                                <span id="narrative-button">{% if is_narrative %}The Narrative{% else %}Read Narrative{% endif %}</span>
+                            </a>
+                            <ul>
+                                {% block nav_items_narrative %}{% endblock %}
+                            </ul>
+                        </li>
+                        <li {% if is_yale %}id="subnav"{% endif %}>
+                            <a href="{% block yale_link %}{% endblock %}">
+                                <span id="yale-button">How Yale Compares</span>
+                            </a>
+                            <ul>
+                                {% block nav_items_yale %}{% endblock %}
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                {% endif %}
+            {% endblock %}
+
+            <div id="main">
                 {% block content %}{% endblock %}
-			</div>
+            </div>
 
-			{% block extra_content %}{% endblock %}
+            {% block extra_content %}{% endblock %}
 
-		    <div id="TheCrimson_AllArticles_BTF_728x90" class="leaderboard ad">
-		        <script type='text/javascript'>
-		            if ($(window).width >= 728) {
-		                googletag.cmd.push(function() { googletag.display('TheCrimson_AllArticles_BTF_728x90'); });
-		            }
-		        </script>
-		    </div>
-		</div>
-	</body>
+            <div id="TheCrimson_AllArticles_BTF_728x90" class="leaderboard ad">
+                <script type='text/javascript'>
+                    if ($(window).width >= 728) {
+                        googletag.cmd.push(function() { googletag.display('TheCrimson_AllArticles_BTF_728x90'); });
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
 </html>
