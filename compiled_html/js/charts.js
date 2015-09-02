@@ -294,6 +294,13 @@ function createFullerChart(type, titles, colors, filenames, unit, div, startidx,
     else if (type == 'bar') {
         options = $.extend(options, barOptions);
     }
+    // Override with our "moreOptions"
+    if (moreOptions) {
+        for (key in options) {
+            if (key in moreOptions)
+                options[key] = $.extend(options[key], moreOptions[key]);
+        }
+    }
 
     $.each(filenames, function(datanum, filename){
         $.get(filename, function(data) {
@@ -338,11 +345,6 @@ function createFullerChart(type, titles, colors, filenames, unit, div, startidx,
                     }
                 }
             });
-
-            // Override with our "moreOptions"
-            if (moreOptions) {
-                $.extend(options, moreOptions);
-            }
 
             div.highcharts(options);
 

@@ -5,8 +5,7 @@
 
         <title>The Harvard Crimson | Class of 2019 By the Numbers</title>
 
-        {# <base href="http://features.thecrimson.com/2014/freshman-survey/"> #}
-        <base href="http://52.4.112.243:81/">
+        <base href="http://features.thecrimson.com/2015/freshman-survey/">
 
         <link href="http://fonts.googleapis.com/css?family=Lato:400,700|Crimson|Colaborate" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="css/fresh.css">
@@ -70,7 +69,7 @@
                 <div id="topicnav">
                     <ul>
                         <li {% if is_data %}id="subnav"{% endif %}>
-                            <a href="{% block data_link %}{% endblock %}">
+                            <a href="http://features.thecrimson.com/2015/freshman-survey/{% block data_link %}{% endblock %}">
                                 <span id="data-button">{% if is_data %}The Data{% else %}See Data{% endif %}</span>
                             </a>
                             <ul>
@@ -78,7 +77,7 @@
                             </ul>
                         </li>
                         <li {% if is_narrative %}id="subnav"{% endif %}>
-                            <a href="{% block narrative_link %}{% endblock %}">
+                            <a href="http://features.thecrimson.com/2015/freshman-survey/{% block narrative_link %}{% endblock %}">
                                 <span id="narrative-button">{% if is_narrative %}The Narrative{% else %}Read Narrative{% endif %}</span>
                             </a>
                             <ul>
@@ -86,7 +85,7 @@
                             </ul>
                         </li>
                         <li {% if is_yale %}id="subnav"{% endif %}>
-                            <a href="{% block yale_link %}{% endblock %}">
+                            <a href="http://features.thecrimson.com/2015/freshman-survey/{% block yale_link %}{% endblock %}">
                                 <span id="yale-button">How Yale Compares</span>
                             </a>
                             <ul>

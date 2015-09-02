@@ -1,11 +1,11 @@
 $(document).ready(function() {
 
     // Admissions
-    createNumericChart('column', {
-        2017: 'data/2017/1/0/sat_income.csv',
-        2018: 'data/2018/1/0/sat_income.csv',
-        2019: 'data/2019/1/0/sat_income.csv'
-    }, '#sat-income');
+    // createNumericChart('column', {
+    //     2017: 'data/2017/1/0/sat_income.csv',
+    //     2018: 'data/2018/1/0/sat_income.csv',
+    //     2019: 'data/2019/1/0/sat_income.csv'
+    // }, '#sat-income');
     createFullChart('column', ['Male', 'Female'], null, {
         2017: ['data/2017/1/0/sat_male.csv', 'data/2017/1/0/sat_female.csv'],
         2018: ['data/2018/1/0/sat_male.csv', 'data/2018/1/0/sat_female.csv'],

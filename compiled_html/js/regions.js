@@ -97,8 +97,8 @@ function resize_regions(us) {
         }
 
         // sould have "outside" data for 2018 and 2019
-        // if (year == "")
-        //     us.outside.hide();
-        // else if (year == "2018")
-        //     us.outside.show();
+        if (year == "")
+            us.outside.hide();
+        else
+            us.outside.show();
 }

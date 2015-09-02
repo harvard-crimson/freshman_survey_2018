@@ -56,7 +56,7 @@
         2019: 'data/2019/0/0/athletes_raw.csv'
     }, '#athletes-raw');
     createChart('column', {
-        2018: 'data/2018/0/0/athletes-family-income.csv',
+        //2018: 'data/2018/0/0/athletes-family-income.csv',
         2019: 'data/2019/0/0/athletes-family-income.csv'
     }, '#athletes-vs-income');
     createChart('column', {
@@ -73,8 +73,8 @@
     }, '#legacy');
     createChart('column', {
         2018: 'data/2018/0/0/secondary-school-legacy-bar.csv',
-        2019: 'data/2018/0/0/secondary-school-legacy-bar.csv'
-    }, '#legacy-secondary-school');
+        2019: 'data/2019/0/0/secondary-school-legacy-bar.csv'
+    }, '#legacy-secondary-school', null, /* option overrides */ { yAxis: { max: 30 } } );
     createChart('pie', {
         2019: 'data/2019/0/0/transgender.csv'
     }, '#transgender');
