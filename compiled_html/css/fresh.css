@@ -101,15 +101,25 @@ header h1 {
     padding: 5px 0;
 }
 
+#byline a {
+	color: #999;
+}
+
 .intro {
 	margin: 0 auto;
 	width: 75%;
 }
 
-.intro p {
+.intro p,
+.intro ul li {
 	font-size: 20px;
 	line-height: 1.5em;
 	max-width: 1130px;
+}
+
+.intro ul li {
+	width: 80%;
+	margin: 10px auto;
 }
 
 .landing {
@@ -432,6 +442,37 @@ hr {
 	width: 100%;
 }
 
+/*.full-width {
+	width: 100%;
+	background-image: url('img/cover_2019_orig.jpg');
+    background-size: 100%;
+    height: 454px;
+    background-position-y: -550px;
+    color: white;
+    font-family: 'Qlassik', sans-serif;
+}
+
+
+#title-1 {
+	position: absolute;
+	top: 171px;
+	font-size: 42pt;
+	left: 47px;
+}
+#title-2 {
+	position: absolute;
+	top: 260px;
+	font-size: 163pt;
+	left: 42px;
+}
+#title-3 {
+	position: absolute;
+	top: 363px;
+	font-size: 42pt;
+	left: 94px;
+}*/
+
+
 /* Layout */
 
 .half.horizontal {
@@ -585,14 +626,18 @@ header ul li:hover, header ul li.active {
 	color: #fff;
 }
 
+header ul li.inactive {
+	color: #CCC;
+}
+
 header ul li.inactive:hover {
-	background-color: #999;
-	color: white;
+	background-color: rgba(187,6,0,0.95);
+	color: #CCC;
 	cursor: default;
 }
 
 @media (max-width: 890px) {
-	#subnav {
+	#topicnav {
 		display: none;
 	}
 

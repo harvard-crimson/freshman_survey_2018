@@ -49,19 +49,21 @@ $(document).ready(function () {
     });
 });
 
-function add_scatter_plot(vals, wrapper, xlabel, ylabel, color) {
+function add_scatter_plot(vals, wrapper, xlabel, ylabel, color, xrange, yrange) {
     nv.addGraph({
       generate: function() {
           var chart = nv.models.scatterChart()
-                    .showDistX(true)
-                    .showDistY(true)
+                    // .showDistX(true)
+                    // .showDistY(true)
                     .showLegend(false)
                     .color([color]);
           chart.xAxis.tickFormat(d3.format('.02f'));
           chart.yAxis.tickFormat(d3.format('.02f'));
           chart.xAxis.axisLabel(xlabel);
           chart.yAxis.axisLabel(ylabel);
-    
+          if (xrange) { chart.xDomain(xrange); }
+          if (yrange) { chart.yDomain(yrange); }
+
         d3.select('#' + wrapper)
         .datum([
             {
@@ -70,18 +72,18 @@ function add_scatter_plot(vals, wrapper, xlabel, ylabel, color) {
          ])
         .transition().duration(500)
           .call(chart);
-        
+
         d3.select(".nv-legendWrap")
             .attr("display", "none");
 
         nv.utils.windowResize(chart.update);
-    
+
         return chart;
       }
     });
 }
 
-function csv_to_scatter(filenamesByYear, id, xlabel, ylabel, color) {
+function csv_to_scatter(filenamesByYear, id, xlabel, ylabel, color, xrange, yrange) {
     var divsel = "#" + id;
     var yearLegend = makeLegend(Object.keys(filenamesByYear), id, "#" + id);
     var maxYear = Math.max.apply(Math, Object.keys(filenamesByYear));
@@ -116,7 +118,7 @@ function csv_to_scatter(filenamesByYear, id, xlabel, ylabel, color) {
             });
 
             console.log("filename: " + filename + ", id: " + id + year);
-            add_scatter_plot(vals, id + year, xlabel, ylabel, color);
+            add_scatter_plot(vals, id + year, xlabel, ylabel, color, xrange, yrange);
         });
     });
 
@@ -126,29 +128,29 @@ function csv_to_scatter(filenamesByYear, id, xlabel, ylabel, color) {
 }
 
 // optional: default_tab
-function createChart(type, filename, divsel, default_tab) {
-    createMultiChart(type, null, null, filename, divsel, default_tab);
+function createChart(type, filename, divsel, default_tab, moreOptions) {
+    createMultiChart(type, null, null, filename, divsel, default_tab, moreOptions);
 }
 
-function createNumericChart(type, filename, divsel)
+function createNumericChart(type, filename, divsel, moreOptions)
 {
-    createFullChart(type, null, null, filename, '', divsel);
+    createFullChart(type, null, null, filename, '', divsel, moreOptions);
 }
 
-function createChartColor(type, color, filename, divsel) {
-    createMultiChart(type, null, [color], filename, divsel);
-}
-
-// optional: default_tab
-function createMultiChart(type, titles, colors, filenames, divsel, default_tab) {
-    createFullChart(type, titles, colors, filenames, '%', divsel, default_tab)
+function createChartColor(type, color, filename, divsel, moreOptions) {
+    createMultiChart(type, null, [color], filename, divsel, moreOptions);
 }
 
 // optional: default_tab
-function createFullChart(type, titlesByYear, colors, filenamesByYear, unit, divsel, default_tab) {
+function createMultiChart(type, titles, colors, filenames, divsel, default_tab, moreOptions) {
+    createFullChart(type, titles, colors, filenames, '%', divsel, default_tab, moreOptions)
+}
+
+// optional: default_tab
+function createFullChart(type, titlesByYear, colors, filenamesByYear, unit, divsel, default_tab, moreOptions) {
     var id = $(divsel).attr("id");
     var yearLegend = makeLegend(Object.keys(filenamesByYear), id, divsel);
-    if (default_tab === undefined)
+    if (default_tab === undefined || default_tab === null)
         var maxYear = Math.max.apply(Math, Object.keys(filenamesByYear));
     else
         var maxYear = default_tab
@@ -173,8 +175,8 @@ function createFullChart(type, titlesByYear, colors, filenamesByYear, unit, divs
             inc = filenames.length;
         else
             inc = 2;
-            
-        createFullerChart(type, titles, colors, filenames, unit, div, startidx, inc);
+
+        createFullerChart(type, titles, colors, filenames, unit, div, startidx, inc, moreOptions);
     });
 
     $("." + id).hide();
@@ -182,7 +184,7 @@ function createFullChart(type, titlesByYear, colors, filenamesByYear, unit, divs
     yearLegend.find("li:contains(" + maxYear + ")").addClass("selected");
 }
 
-function createFullerChart(type, titles, colors, filenames, unit, div, startidx, inc) {
+function createFullerChart(type, titles, colors, filenames, unit, div, startidx, inc, moreOptions) {
     colorindex += inc;
     var options = {
         chart: {
@@ -228,7 +230,7 @@ function createFullerChart(type, titles, colors, filenames, unit, div, startidx,
             data: [],
         });
     }
-    
+
     var pieOptions = {
         plotOptions: {
             pie: {
@@ -308,7 +310,7 @@ function createFullerChart(type, titles, colors, filenames, unit, div, startidx,
             else if (type != 'pie') {
                 options.series[datanum]['color'] = colorset[startidx++ % colorset.length];
             }
-            
+
             // Iterate over the lines and add categories or series
             $.each(lines, function(lineNo, line) {
 
@@ -336,6 +338,11 @@ function createFullerChart(type, titles, colors, filenames, unit, div, startidx,
                     }
                 }
             });
+
+            // Override with our "moreOptions"
+            if (moreOptions) {
+                $.extend(options, moreOptions);
+            }
 
             div.highcharts(options);
 

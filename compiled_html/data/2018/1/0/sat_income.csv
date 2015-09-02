@@ -1,6 +1,7 @@
-Below $40k,2154.8
-Between $40k and $80k,2178.4
-Between $80k and $125k,2219.6
-Between $1250k and $250k,2241.4
-Between $250k and $500k,2287.4
-Over $500k,2233.9
+$0-$40k,2154.8
+$40k-$80k,2178.4
+$80k-$125k,2219.6
+$125k-$250k,2241.4
+$250k-$500k,2287.4
+$500k and up,2233.9
+Income Not Reported,0

@@ -1,5 +1,7 @@
 $(document).ready(function() {
 	$("div.card").click(function () {
-		window.location = $(this).attr('data-destination');
+		if ($(this).attr('data-destination')) {
+			window.location = $(this).attr('data-destination');
+		}
 	});
 });

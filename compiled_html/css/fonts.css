@@ -143,3 +143,12 @@ Chunk Five
     font-weight: normal;
     font-style: normal;
 }
+
+/*
+Qlassik
+*/
+@font-face {
+    font-family: 'Qlassik';
+    src: url('../fonts/QlassikBold_TB.otf') format('opentype'),
+         url('../fonts/QlassikBold_TB.ttf') format('truetype');
+}

@@ -31,10 +31,10 @@ googletag.cmd.push(function() {
 	googletag.enableServices();
 });
 
-addthis.layers({
-	'theme' : 'transparent',
-	'share' : {
-	  'position' : 'right',
-	  'numPreferredServices' : 5
-	}
-});
+// addthis.layers({
+// 	'theme' : 'transparent',
+// 	'share' : {
+// 	  'position' : 'right',
+// 	  'numPreferredServices' : 5
+// 	}
+// });

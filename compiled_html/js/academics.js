@@ -91,8 +91,8 @@ $(document).ready(function() {
 
     // Athletics
     createChart('pie',{
-        2017: 'data/2017/0/0/athletes_raw.csv',
-        2018: 'data/2018/0/0/athletes_raw.csv'
+        2018: 'data/2018/0/0/athletes_raw.csv',
+        2019: 'data/2017/0/0/athletes_raw.csv'
     }, '#athletes-raw');
     createChart('bar', {
         2017: 'data/2017/2/3/four_years.csv',
