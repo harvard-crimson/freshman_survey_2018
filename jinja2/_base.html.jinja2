@@ -5,7 +5,8 @@
 
         <title>The Harvard Crimson | Class of 2019 By the Numbers</title>
 
-        <base href="http://features.thecrimson.com/2015/freshman-survey/">
+        <!-- <base href="http://features.thecrimson.com/2015/freshman-survey/"> -->
+        <base href="http://52.4.112.243:81/">
 
         <link href="http://fonts.googleapis.com/css?family=Lato:400,700|Crimson|Colaborate" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="css/fresh.css">
@@ -22,7 +23,7 @@
             ga('send', 'pageview');
         </script>
         <script src="//code.jquery.com/jquery-latest.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=thecrimson" type="text/javascript"></script>
+        {# <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=thecrimson" type="text/javascript"></script> #}
         <script src="js/jquery-csv.min.js"></script>
         <script src="js/jquery.affix.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/jquery.tabs.js" type="text/javascript" charset="utf-8"></script>
@@ -53,19 +54,17 @@
                     <a href="">          <li{% if 'index'     in filename %} class="active"{% endif %}>Introduction</li></a>
                     <a href="makeup/">   <li{% if 'makeup'    in filename %} class="active"{% endif %}>Class Makeup &amp; Admissions</li></a>
                     <a href="academics/"><li{% if 'academics' in filename %} class="active"{% endif %}>Academics &amp; Extracurriculars</li></a>
-                    {# <a href="lifestyle/"> #}<li{% if 'lifestyle' in filename %} class="active"{% endif %} class="inactive">Beliefs &amp; Lifestyle</li>{# </a> #}
+                    <a href="lifestyle/"><li{% if 'lifestyle' in filename %} class="active"{% endif %}>Beliefs &amp; Lifestyle</li></a>
                 </ul>
             </div>
         </header>
 
         {% block cover_image %}
             <img class="full-width" src="img/cover_2019.jpg">
-            <!-- <div class="full-width" style="
-                background-image: url('img/cover_2019_orig.jpg');
-                background-size: 100%;">
-                <p id="title-1" style="position: absolute; top: 171px; font-family: 'Qlassik'; font-size: 42pt; left: 47px;">Class of</p>
-                <p id="title-2" style="position: absolute; top: 260px; font-family: 'Qlassik'; font-size: 163pt; left: 42px;">2019</p>
-                <p id="title-3" style="position: absolute; top: 363px; font-family: 'Qlassik'; font-size: 42pt; left: 94px;">by the numbers</p>
+            <!-- <div class="full-width">
+                <p id="title-1">Class of</p>
+                <p id="title-2">2019</p>
+                <p id="title-3">by the numbers</p>
             </div> -->
         {% endblock %}
 

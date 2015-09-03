@@ -134,7 +134,7 @@ function createChart(type, filename, divsel, default_tab, moreOptions) {
 
 function createNumericChart(type, filename, divsel, moreOptions)
 {
-    createFullChart(type, null, null, filename, '', divsel, moreOptions);
+    createFullChart(type, null, null, filename, '', divsel, null, moreOptions);
 }
 
 function createChartColor(type, color, filename, divsel, moreOptions) {
