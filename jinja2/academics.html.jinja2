@@ -7,20 +7,32 @@
     <script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
 
+{% block data_link %}academics/{% endblock %}
+{% block narrative_link %}academics-narrative/{% endblock %}
+{% block yale_link %}academics-yale/{% endblock %}
+
 {% block nav_items %}
     <li>Cheating</li>
     <li>In High School</li>
     <li>At Harvard</li>
     <li>Athletics</li>
 {% endblock %}
-{% block narrative_link %}http://www.thecrimson.com/article/2014/9/4/freshman-survey-academics-extracurriculars/{% endblock %}
+
+{% block cover_image %}
+    <img class="full-width" src="img/cover_2019_2.jpg">
+{% endblock %}
 
 {% block content %}
     <div class="intro scroll-row">
         <div id="subhead">Academics and Extracurriculars</div>
-        <p>Part III of The Crimson&#39;s survey of the Class of 2018 examines the academic and extracurricular pursuits of the incoming freshmen. Roughly a quarter of surveyed freshmen admitted to cheating in an academic context while in high school, but most anticipate studying more once they arrive on campus and almost 90 percent said academics are their top priority here. The respondents&mdash;more than 70 percent of the incoming class&mdash;appear just as active outside of the classroom, on the field and in clubs. Like true Harvard students, they are ready to go—in every direction.</p>
-
-        <p>Read Part III of The Crimson's five-part series on the freshman survey <a href="http://www.thecrimson.com/article/2014/9/4/freshman-survey-academics-extracurriculars/">here</a>.</p>
+        <p id="byline">
+            <i>By</i>
+            <a href="http://www.thecrimson.com/writer/1209849/David__Freed/">David Freed</a>
+            and
+            <a href="www.thecrimson.com/writer/1209871/Idrees_M._Kahloon/">Idrees Kahloon</a>
+        </p>
+        <p>Part II of The Crimson's survey of the Class of 2019 takes an in-depth look at the academic and extracurricular experiences and plans of the incoming freshmen. About one in eight survey respondents were recruited to play a varsity sport while in Cambridge, while about one in 12 took a gap year between high school and college to pursue paid or volunteer work, travel, or other activities. More than 40 percent of respondents indicated some level of interest in joining a final club, fraternity, or sorority when they arrive on campus. They have plans for the classroom, too; like their upperclassman peers, many surveyed freshmen reported plans to study government or economics in college, and a small group said the College's new concentration in Theater, Dance, and Media influenced their decision to matriculate.
+        <p>Read Part II of The Crimson's three-part series on the freshman survey <a href="academics-narrative/">here</a>.</p>
     </div>
 
     <div class="scroll-row">
@@ -42,6 +54,9 @@
                 <a href="#cheating-recruits-tab" data-toggle="tab">Cheating by Recruit Status</a>
             </li>
             <li>
+                <a href="#cheating-recruits-breakdown-tab" data-toggle="tab">Recruit Cheating Breakdown</a>
+            </li>
+            <li>
                 <a href="#cheating-gender-tab" data-toggle="tab">Cheating by Gender</a>
             </li>
         </ul>
@@ -49,32 +64,37 @@
             <li id="exam-cheaters-tab" class="active">
                 <h2>Cheating on an Exam</h2>
                 <div id="exam-cheaters" class="graph"></div>
-                <p>Ten percent of respondents admitted to cheating on an exam during high school, the same percent as those who responded to last year’s survey. By comparison, 6 percent of last year’s graduating seniors who responded to The Crimson’s senior survey admitted to cheating on a paper or exam in college.</p>
+                <p></p>
             </li>
             <li id="paper-cheaters-tab">
                 <h2>Cheating on a Paper or Take-Home Assignment</h2>
                 <div id="paper-cheaters" class="graph"></div>
-                <p>Ten percent of surveyed freshmen reported cheating on a paper in high school, a decrease from last year’s survey. Six percent of last year’s graduating seniors who responded to The Crimson’s senior survey admitted to cheating on a paper or exam in college.</p>
+                <p></p>
             </li>
             <li id="homework-cheaters-tab">
                 <h2>Homework or Problem Sets</h2>
                 <div id="homework-cheaters" class="graph"></div>
-                <p>Twenty-two percent of respondents admitted to cheating on a problem set or homework assignment in high school, a significant decrease from last year, when 42 percent of surveyed incoming freshmen reported doing so. Fifteen percent of of last year’s graduating seniors who responded to The Crimson’s senior survey admitted to cheating on a problem set or homework assignment during their time in college.</p>
+                <p></p>
             </li>
             <li id="cheating-school-type-tab">
                 <h2>Cheating by Type of High School</h2>
                 <div id="cheating-school-type" class="graph"></div>
-                <p>Eleven percent of respondents from public schools reported cheating on an exam and on a paper or take-home assignment, compared to 7.6 percent and 9 percent of private school students, respectively. The percentage of this year’s respondents from public schools who admitted cheating on a paper or take-home assignment declined by about 9 percentage points from last year.</p>
+                <p></p>
             </li>
             <li id="cheating-recruits-tab">
                 <h2>Cheating by Recruit Status</h2>
                 <div id="cheating-recruits" class="graph"></div>
-                <p>Last year’s survey showed a 10 percentage point gap between the percentage of recruited athletes who admitted to cheating on a high school exam and non-athletes who admitted to doing so. This year the gap appears to have been almost nonexistent.</p>
+                <p></p>
+            </li>
+            <li id="cheating-recruits-breakdown-tab">
+                <h2>Recruit Cheating Breakdown</h2>
+                <div id="cheating-recruits-breakdown" class="graph"></div>
+                <p></p>
             </li>
             <li id="cheating-gender-tab">
                 <h2>Cheating by Gender</h2>
                 <div id="cheating-gender" class="graph"></div>
-                <p>A higher percentage of male respondents admitted to cheating in an academic context than female respondents.</p>
+                <p></p>
             </li>
         </ul>
     </div>
@@ -84,6 +104,12 @@
         <ul class="nav nav-tabs">
             <li class="active">
                 <a href="#study-habits-past-tab" data-toggle="tab">Study Hours</a>
+            </li>
+            <li>
+                <a href="#study-habits-school-type-tab" data-toggle="tab">Study Hours by School Type</a>
+            </li>
+            <li>
+                <a href="#math-level-tab" data-toggle="tab">Math Level</a>
             </li>
             <li>
                 <a href="#pressure-tab" data-toggle="tab">Sources of Pressure</a>
@@ -105,32 +131,42 @@
             <li id="study-habits-past-tab" class="active">
                 <h2>Study Hours</h2>
                 <div id="study-habits-past" class="graph"></div>
-                <p>A plurality of surveyed freshmen reported studying between 11 and 19 hours in high school. These figures mirrored those of last year’s survey of the incoming Class of 2017. There was a large difference between the study habits of recruited athletes in high school and all freshman respondents, with a plurality of recruits studying 10 or fewer hours a week.</p>
+                <p></p>
+            </li>
+            <li id="study-habits-school-type-tab">
+                <h2>Study Hours by School Type</h2>
+                <div id="study-habits-school-type" class="graph"></div>
+                <p></p>
+            </li>
+            <li id="math-level-tab">
+                <h2>Math Level</h2>
+                <div id="math-level" class="graph"></div>
+                <p></p>
             </li>
             <li id="pressure-tab">
                 <h2>Sources of Pressure</h2>
                 <div id="pressure" class="graph"></div>
-                <p>Like last year’s respondents, the majority of surveyed freshmen this year reported that their greatest source of pressure comes from their own expectations. Students did not appear to feel pressured by their teachers.</p>
+                <p></p>
             </li>
             <li id="extracurriculars-tab">
                 <h2>High School Extracurriculars</h2>
                 <div id="extracurriculars" class="graph"></div>
-                <p>The five most popular activities were, in descending order, community service, athletics, music clubs/bands, student government, and science clubs/competitions.</p>
+                <p></p>
             </li>
             <li id="athletics-by-income-tab">
                 <h2>Participation in High School Athletics by Income</h2>
                 <div id="athletics-by-income" class="graph"></div>
-                <p>Athletics was the only high school extracurricular activity in which respondents’ participation varied reliably by reported combined family income. The higher their family income bracket, the more likely respondents were to report participating in athletics in high school.</p>
+                <p></p>
             </li>
             <li id="leadership-tab">
                 <h2>High School Extracurricular Leadership</h2>
                 <div id="leadership" class="graph"></div>
-                <p>The number of high school leadership positions held by respondents varied little by reported legacy status, gender, income level, or school type. The majority of respondents reported holding between one and three leadership positions in high school.</p>
+                <p></p>
             </li>
             <li id="government-tab">
                 <h2>Belief in Power of Student Government</h2>
                 <div id="government" class="graph"></div>
-                <p>Respondents who participated in student government were more confident in student government than non-participants.</p>
+                <p></p>
             </li>
         </ul>
     </div>
@@ -153,9 +189,9 @@
             <li>
                 <a href="#concentration-raw-tab" data-toggle="tab">Concentrations</a>
             </li>
-            <li>
+            {# <li>
                 <a href="#concentration-gender-tab" data-toggle="tab">Concentrations by Gender</a>
-            </li>
+            </li> #}
             <li>
                 <a href="#secondary-tab" data-toggle="tab">Secondary/Citation</a>
             </li>
@@ -170,37 +206,37 @@
             <li id="study-habits-future-tab" class="active">
                 <h2>Anticipated College Study Hours</h2>
                 <div id="study-habits-future" class="graph"></div>
-                <p>A plurality of respondents reported that they expect to study between 20 and 29 hours a week at Harvard. Just 6 percent said they expect to study 50 or more hours a week.</p>
+                <p></p>
             </li>
             <li id="priorities-raw-tab">
                 <h2>Anticipated College Priorities</h2>
                 <div id="priorities-raw" class="graph"></div>
-                <p>This year&rsquo;s respondents&rsquo; priorities differ little from those of their surveyed sophomore counterparts last fall. The vast majority of this year&rsquo;s respondents ranked academics as their number one priority while at college, while only .3 percent of respondents ranked term-time employment as their top priority. Forty-three percent of respondents ranked extracurricular activities as their second highest priority at Harvard.</p>
+                <p></p>
             </li>
             <li id="secondary-tab">
                 <h2>Anticipated Secondaries and Language Citations</h2>
                 <div id="secondary" class="graph"></div>
-                <p>Interest in fulfilling secondary fields and language citations remained largely the same in this year&rsquo;s survey, with 40 percent of respondents reporting they intend to pursue a secondary and 12 percent reporting they intend to pursue a language citation.</p>
+                <p></p>
             </li>
             <li id="concentration-raw-tab">
                 <h2>Anticipated Concentrations</h2>
                 <div id="concentration-raw" class="graph"></div>
-                <p>Like last year&rsquo;s respondents, a plurality of this year&rsquo;s surveyed freshmen reported that they are planning to concentrate in the social sciences. </p>
+                <p></p>
             </li>
-            <li id="concentration-gender-tab">
+            {# <li id="concentration-gender-tab">
                 <h2>Anticipated Concentrations by Gender</h2>
                 <div id="concentration-gender" class="graph"></div>
-                <p>Gender disparities in concentration choice are very much in the national discourse, and the issue presents itself at Harvard as well. Female members of the Class of 2018 were more interested in concentrating in arts and humanities, social sciences, and life sciences than their male counterparts, while males were more interested in other sciences and engineering.</p>
-            </li>
+                <p></p>
+            </li> #}
             <li id="greek-tab">
                 <h2>Frats, Sororities, and Final Clubs</h2>
                 <div id="greek" class="graph"></div>
-                <p>Slightly less than half of respondents said that they were somewhat or very interested in joining a fraternity, sorority, or final club.</p>
+                <p></p>
             </li>
             <li id="greek-school-tab">
                 <h2>Frats, Sororities, and Final Clubs by School Type</h2>
                 <div id="greek-school" class="graph"></div>
-                <p>Respondents from public schools were overall less interested than those from private schools in joining fraternities, sororities, or final clubs during their time at Harvard.</p>
+                <p></p>
             </li>
         </ul>
     </div>
@@ -223,9 +259,9 @@
             <li>
                 <a href="#concussions-tab" data-toggle="tab">Concussions Numbers</a>
             </li>
-            <li>
+            {# <li>
                 <a href="#concussions-view-tab" data-toggle="tab">Attitudes Regarding Concussions</a>
-            </li>
+            </li> #}
             <li>
                 <a href="#athletes-economics-conc-tab" data-toggle="tab">Preferences for Economics by Athletics</a>
             </li>
@@ -234,27 +270,27 @@
             <li id="athletes-raw-tab" class="active">
                 <h2>Athletes at Harvard</h2>
                 <div id="athletes-raw"></div>
-                <p>Nearly 20 percent of those surveyed in the Class of 2018 intend to play varsity sports at Harvard. In addition to the 11 percent of respondents who said they were recruited athletes, 9 percent plan to walk on to a varsity team. Harvard does not offer athletic scholarships to recruited athletes or give out merit scholarships of any kind.</p>
+                <p></p>
             </li>
             <li id="attrition-athletics-tab">
                 <h2>Likelihood of Playing All Four Years</h2>
                 <div id="attrition-athletics" class="graph"></div>
-                <p>Ninety-three percent of respondents who were recruited athletes reported that it is likely or very likely that they would play for all four years, compared to only 35.2 percent of walk-ons. The University does not report the rate of varsity athletes who play for all four years.</p>
+                <p></p>
             </li>
             <li id="concussions-tab">
                 <h2>Athletics and Concussions</h2>
                 <div id="concussions" class="graph"></div>
-                <p>Similarly to last year’s survey, 78 percent of surveyed athletes—including recruits and intended walk-ons—have never been concussed.</p>
+                <p></p>
             </li>
-            <li id="concussions-view-tab">
+            {# <li id="concussions-view-tab">
                 <h2>Effect of Concussions on Attitude Towards Sport</h2>
                 <div id="concussions-view" class="graph"></div>
-                <p>Twenty-three percent of respondents who reported having been concussed said they changed their attitudes toward concussions because of the incident.</p>
-            </li>
+                <p></p>
+            </li> #}
             <li id="athletes-economics-conc-tab">
                 <h2>Preferences for Economics by Athletics</h2>
                 <div id="athletes-economics-conc" class="graph"></div>
-                <p>Economics, the most popular prospective concentration among respondents, appears to interest some groups more than others. Recruited athletes were much more likely to report intention to concentrate in the field than non-recruits.</p>
+                <p></p>
             </li>
         </ul>
     </div>

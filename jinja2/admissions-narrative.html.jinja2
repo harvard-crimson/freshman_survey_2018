@@ -1,68 +1,99 @@
 {% extends 'jinja2/_base.html.jinja2' %}
 
-{% block js %}
-    <script src="js/regions.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/charts.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/academics.js" type="text/javascript" charset="utf-8"></script>
+{% block js %}`
     <script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
 
-{% block nav_items %}
-    <li>Cheating</li>
-    <li>In High School</li>
-    <li>At Harvard</li>
-    <li>Athletics</li>
+{% block data_link %}makeup/{% endblock %}
+{% block narrative_link %}makeup-narrative/{% endblock %}
+{% block yale_link %}makeup-yale/{% endblock %}
+
+{% block nav_items_narrative %}
+    <li>Who They Are</li>
+    <li>Financial Aid</li>
+    <li>Legacy Status</li>
+    <li>SAT Scores</li>
+    <li>Admissions</li>
 {% endblock %}
-{% block narrative_link %}http://www.thecrimson.com/article/2014/9/4/freshman-survey-academics-extracurriculars/{% endblock %}
-{% block paired_text %}See Data{% endblock %}
 
 {% block content %}
-    <div id="text">
-        <p><strong>UPDATED: September 3, 2014, at 2:00 p.m.</strong></p>
-        <p><em>Part II of a five-part series on Harvard’s incoming Class of 2018, based on data collected by The Crimson in an email survey conducted in the month of August. </em><a href="http://www.thecrimson.com/article/2014/9/2/freshman-survey-part-i/"><em>Part I</em></a><em> ran on Tuesday.</em></p>
-        <p>Last February, the College <a href="http://news.harvard.edu/gazette/story/2014/02/applications-remain-high/">reported</a> a 38 percent increase in requests for application fee waivers by prospective members of the Class of 2018, suggesting “even more economic diversity for the incoming class than for previous ones.”</p>
-        <p>The Harvard Crimson’s survey of the Class of 2018, however, finds indication that the class is no less disproportionately wealthy than last year’s. Seventy-two percent of respondents reported that their annual family income exceeds $80,000. The median American household income is just over $51,000, according to U.S. Census data.</p>
-        <p>The survey also reveals several potential reasons for why this imbalance exists. Students whose annual family income exceeds $500,000, for example, on average score higher on their SATs and are more likely to hire private admissions counselors. They are also more likely to have a parent who attended the College and to be admitted early compared to their lower income peers.</p>
-        <p>The email survey, conducted by The Harvard Crimson, was sent to all incoming freshman on Aug. 6 and closed on Aug. 28. Of the 1,667 students in the incoming freshman class, 1,172 filled out the survey, representing around 70 percent of the class. The Crimson did not adjust the survey results for any possible selection bias.</p>
-        <p><strong>The Thick Envelope</strong></p>
-        <p>Reflecting the fact that very few applicants gain admission to the College, most respondents reported exceptional standardized test scores and grade point averages.</p>
-        <div class="shortcodes-wrapper shortcodes-wrapper-right shortcodes-wrapper-medium">
-            <div class="shortcodes-object">
-                <a href="/image/2014/3/27/admissionsletters5/" class="shortcodes-block">
-                    <img src="http://thumbnails.thecrimson.com.s3.amazonaws.com/photos/2014/03/27/134216_1295261.JPG.797x1200_q95_crop-smart_upscale.jpg" title="Acceptance Letters" alt="Acceptance Letters">
-                </a>
-                <div class="shortcodes-description">
-                    <div class="shortcodes-byline">
-                        <a href="/writer/1209073/Shunella_Grace_Lumas/">Shunella Grace Lumas</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p>Respondents reported taking the SAT on average 2.14 times and scored an average composite score of 2237, a figure consistent with last year’s average and placing the average surveyed College student in the top 1 percent of all SAT test takers, according to CollegeBoard. Around 8 percent of respondents reported a perfect 2400 score on their SAT.</p>
-        <p>Surveyed students from Northeastern states tended to perform better on their SATs, with an average score of 2253. On the other hand, students hailing from outside of the United States averaged the lowest test scores based on reported data, obtaining an average of 2197 on their SAT exams.</p>
-        <p>Eighty-three percent of respondents said that Harvard was their top choice, and, on average, students applied to 6.7 schools and were accepted to 4.6 . Sixteen percent of surveyed students said they used a private admissions counselor.</p>
-        <p>Thirty percent of surveyed female students said that they considered the culture and policies surrounding sexual assault when deciding whether to go to Harvard, while only 8 percent of male respondents said the same.</p>
-        <p>The highest number of schools any respondent applied to was 35, and the highest number of acceptances was 30. &nbsp;</p>
-        <p>Fifty-six percent of respondents said they were admitted to Harvard early, a nearly six percentage point increase compared to last year’s survey.</p>
-        <p>About 74 percent of students who indicated that they are legacy students, meaning they have one or more parents who attended the College, were admitted through early admissions.</p>
-        <p>Legacy students on average reported higher test scores than their non-legacy peers. The average SAT for self-reported legacy students was 2296, while the average score for the rest of the survey’s respondents was 2237. The average GPA for legacy students was a 3.9, compared to a 3.93 average GPA for non-legacy respondents.</p>
-        <p>Average SAT scores, similar to last year, varied by ethnicity. Asian respondents reported the highest average SAT score of 2305, while black and Hispanic or Latino students reported the two lowest averages, at 2157 and 2201, respectively.</p>
-        <p>Based on the survey’s results, white students appear to enjoy key advantages when it comes to the admissions process. Eighty-eight percent of legacy students, for instance, reported their ethnicity as white. About 17 percent of white respondents reported that they hired private admissions counselors, a higher rate than all groups by Asians.</p>
-        <p><strong>Money, Power, Admissions</strong></p>
-        <p>Following a widely documented trend in college admissions, 67 percent of respondents who said their family makes more than $500,000 annually were accepted through early admissions, compared to just 35 percent of those students who said their family income is lower than $40,000.</p>
-        <p>Students whose families make more than $500,000 annually hired private admissions counselors nearly four times as much as those students whose families earn less than $40,000. Additionally, this year, 32 percent of those students in the highest income bracket hired private counselors, compared to 22.6 percent last year. &nbsp;Students whose families make less than $40,000 per year attained, on average, SAT scores 80 points lower than those whose family income exceeded $500,000 per year.</p>
-        <p>Dean of Admissions and Financial Aid William R. Fitzsimmons ’67 said in an interview last October that part of the reason that an income gap exists in early admissions is that students from less privileged economic backgrounds generally do not have access to the same resources in the college admissions process as their more wealthy peers.</p>
-        <p>“What tends to happen with people of modest economic backgrounds is they tend to disproportionately attend schools where there are fewer counselors per student. Many also attend schools where there are fewer teachers per student,” Fitzsimmons said.</p>
-        <p><strong>Bigger, Faster, Stronger</strong></p>
-        <p>Eleven percent of respondents said that they are coming to Harvard as recruited athletes.</p>
-        <p>Non-athletes reported an average SAT composite score of 2256, while the average reported SAT score for athletes was 2068. Non-athletes estimated their IQs, on average, to be nearly five points higher than that of athletes.</p>
-        <p>Recruited athletes reported a higher family income, on average, than that of the total surveyed class, with only 1.6 percent of recruited athletes reporting that their families make less than $40,000 per year. Eighty-three percent of athletes identified as white or multi-racial.</p>
-        <p><strong>Offsetting College Costs</strong></p>
-        <p>Fifty-four percent of respondents said that they receive financial aid from the College, marking a slightly lower figure than the nearly <a href="http://news.harvard.edu/gazette/story/2014/03/college-admits-class-of-18/">60 percent</a> of students that the Admissions and Financial Aid office <a href="https://college.harvard.edu/financial-aid/how-aid-works/fact-sheet">reports </a>receive need-based aid.</p>
-        <p>Fifty-four percent of respondents who live in urban areas said they receive financial aid, while 52 percent of those who hail from suburban areas and 73 percent from rural areas reported the same.</p>
-        <p>Of those receiving financial aid, 29 percent of respondents said they attended private school, while 70 percent attended public school. Six tenths of a percent selected the home-schooled or “other” option. Eleven percent of the people who said that they receive financial aid also said they are recruited athletes, a figure that almost exactly matches the proportion of recruited athletes in the class overall.</p>
-        <p>—Staff writer Theodore R. Delwiche can be reached at theodore.delwiche@thecrimson.com. Follow him on twitter <a href="https://twitter.com/trdelwic">@trdelwic</a>.</p>
-        <p>—Staff writer Alexander H. Patel can be reached at alex.patel@thecrimson.com. Follow him on twitter <a href="https://twitter.com/alexhpatel">@alexhpatel</a>.</p>
+    <div id="subhead">Makeup of the Class</div>
+    <div id="narrative" class="intro scroll-row">
+        <p id="byline">
+            <i>By</i>
+            <a href="http://www.thecrimson.com/writer/1210615/Mariel%20A.%20Klein__%20/">Mariel A. Klein</a>
+            and
+            <a href="http://www.thecrimson.com/writer/1212330/Elizabeth_C._Keto/">Elizabeth C. Keto</a>
+        </p>
+        <p>Sixteen percent of surveyed students in Harvard College’s Class of 2019 reported that they are first-generation college students, meaning their parents and other previous generations did not attend college, according to The Harvard Crimson’s annual survey of the incoming freshman class.</p>
+        <p>The same proportion of students surveyed—16 percent—reported that one or more of their parents attended the College, meaning they are considered legacies by the Harvard Admissions Office, which says such students “may receive an additional look” when they apply.</p>
+        <p>Harvard, whose student body still largely hails from elite upbringings socioeconomically, has pushed to attract and welcome more students from diverse backgrounds in recent years through its famously generous financial aid program and varied <a href="http://www.thecrimson.com/article/2013/10/24/financial-aid-office-connection/">recruitment tactics</a>. But first-generation students at Harvard have said that they <a href="http://features.thecrimson.com/2014/year-in-review/article/after-acceptance/">still face challenges</a> on campus when they arrive.</p>
+        <p>Surveyed first-generation students reported coming from more diverse racial, socioeconomic, and geographic backgrounds than Harvard freshmen who are not first-generation.</p>
+        <p>Students who identified as first-generation, for example, reported that they come from households with significantly lower incomes than their non-first-generation peers. Forty-five percent of first-generation respondents reported a household income of less than $40,000, compared to 9 percent of respondents who are not the first in their families to attend college. Just 3 percent of first-generation respondents reported household incomes of $500,000 or over, compared to 18 percent of their non-first-generation peers.</p>
+        <p>A higher percentage of first-generation respondents identified as racial and ethnic minorities: 28 percent are Hispanic or Latino, and 17 percent are black or African-American, while 36 percent are white. Sixty-two percent of non-first-generation respondents, in contrast, are white.</p>
+        <p>Geographically, a quarter of surveyed first-generation students hail from the West—compared to 17 percent of respondents who are not first-generation—and 39 percent grew up in an urban environment, compared to 26 percent of other respondents. About 15 percent of first-generation respondents are from rural communities and 47 percent from suburban. Sixty-six percent of respondents who are not the first in their families to attend college, meanwhile, are from the suburbs.</p>
+        <p>Of surveyed students who identified as first-generation, 94 percent reported that they receive financial aid from the College, compared to 48 percent of respondents who are not first-generation.</p>
+        <p>The Crimson’s annual survey asked incoming freshmen dozens of questions on topics including their financial and educational backgrounds, views on politics and religion, interest in campus social life, expectations about academic and extracurricular life at Harvard, and experience with drugs and alcohol. The Crimson did not adjust the survey results for any possible selection bias.</p>
+        <p>Conducted by The Crimson, the survey was emailed to all incoming freshmen on Aug. 6 and closed on Aug. 27, garnering responses from 1,184 students, roughly 71 percent of the 1,665-person class.</p>
+        <p class="scroll-row"><strong>Who They Are</strong></p>
+        <p>Survey respondents reported different backgrounds and demographics, although most are white and hail from relatively near Harvard.</p>
+        <ul>
+            <li>Fifty-eight percent of respondents identify as white, compared to 62 percent of respondents to The Crimson’s 2014 survey of the Class of 2018. About 30 percent of respondents identify as Asian or South Asian; just more than 12 percent as Hispanic or Latino; 11 percent as black or African American; 1 percent as American Indian or Alaskan Native; and 1 percent as Pacific Islander.</li>
+            <li>Women made up a slight majority of freshman respondents; 51 percent of survey respondents are female and 48 percent are male. This offsets an opposite gender dynamic in the Class of 2018, in which 53 percent of members surveyed last year were male.</li>
+            <li>Six respondents, or about half a percent, in the Class of 2019 identify as transgender.</li>
+            <li>A plurality of Harvard’s Class of 2019 hails from the Northeast, at 38 percent, a decrease from the 43 percent of last year’s respondents. Nineteen percent of this year’s freshman respondents are from the West, and 11 percent are international students.</li>
+            <li>Most surveyed students—63 percent—live in the suburbs. Just 9 percent of respondents are from rural areas.</li>
+            <li>Before coming to Harvard, 63 percent of respondents attended public school, most of them non-charter, while 35 percent attended private school—26 percent non-denominational and 10 percent parochial.</li>
+            <li>Of surveyed freshmen who reported a household income less than $40,000, 80 percent went to public school and 20 percent went to private school. Of surveyed freshmen whose household income totals $500,000 or more, 32 percent went to public school and 66 percent went to private school.</li>
+            <li>Eighty-six percent of surveyed freshmen in the Class of 2019 identify as heterosexual. Five percent identify as homosexual and 5 percent as bisexual, and 3 percent said they are questioning.</li>
+            <li>Male survey respondents were more likely to identify as homosexual, while female respondents were more likely to identify as bisexual. About 81 percent of respondents who identify as homosexual are male, and 73 percent of surveyed freshmen who identify as bisexual are female.</li>
+            <li>A year after Harvard unveiled a new sexual assault policy, thirty-four percent of female respondents said they considered the culture and policies surrounding sexual assault when deciding whether to attend Harvard, while only 11 percent of male students said the same.</li><li>Eight percent of freshman respondents took a gap year between high school and college. Of those, 61 percent said their admission to Harvard was deferred by a year, suggesting that they are members of the Admissions Office’s “z-list.” Of gap year respondents who said their admission was deferred by a year, 39 percent of respondents reported that one or both of their parents attended Harvard College.</li>
+        </ul>
+        <p class="scroll-row"><strong>Financial Aid</strong></p>
+        <p>Harvard again offered substantial financial aid to the incoming freshman class, and a disproportionate percentage of recipients among surveyed students identify as racial and ethnic minorities and attended public school.</p>
+        <ul>
+            <li>About 56 percent of freshman respondents reported receiving financial aid from Harvard.</li>
+            <li>Roughly 77 percent of students who identify as black or African American; 69 percent who identify as Hispanic or Latino; and 81 percent who identify as American Indian or Alaskan Native said they received financial support from the College.</li>
+            <li>About 66 percent of respondents who attended public non-charter high school reported that they receive financial aid, while 33 percent from private non-denominational school and 49 percent from parochial private school said the same.</li>
+            <li>About 45 percent of respondents who reported that they were recruited to play a varsity sport at Harvard said they receive financial aid.</li>
+        </ul>
+        <p class="scroll-row"><strong>Legacy Status</strong></p>
+        <p>Sixteen percent of surveyed freshmen reported that one or more of their parents attended Harvard College, meaning they are considered legacies in the admissions process. More than a quarter of respondents—28 percent—said that they have a relative in their immediate or extended family who attended the College.</p>
+        <ul>
+            <li>About 55 percent of surveyed legacies hail from the Northeast.</li>
+            <li>Thirty-three percent of students who attended non-denominational private school reported that one or more of their parents attended the College.</li>
+            <li>Roughly half of surveyed legacies reported attending a non-denominational private school.</li>
+            <li>A quarter of white freshmen surveyed are legacies.</li>
+            <li>Nine percent of respondents reported that they have one or more sibling had attended the College.</li>
+            <li>Of respondents who reported a household income of less than $40,000, only one person said one or both of their parents attended the College. Of respondents who reported a household income of $500,000 or more, 43 percent said one or both of their parents did.</li>
+            <li>Forty-one percent of respondents who are legacies according to the College said their parents’ combined annual income is $500,000 or more.</li>
+        </ul>
+        <p class="scroll-row"><strong>SAT Scores</strong></p>
+        <p>The average best overall SAT score of respondents was 2229. Following a year of national scrutiny surrounding Harvard’s use of <a href="http://www.thecrimson.com/article/2014/11/18/law-suit-admissions-alleged-discrimination/">race-based affirmative action and allegations</a> that its admissions processes discriminate against Asian applicants, the reported SAT scores of freshman respondents varied on average by race.</p>
+        <ul>
+            <li>Respondents who identify as Asian, but not including South Asian, reported higher overall SAT scores on average, with an overall best score of 2300 out of a possible 2400.</li>
+            <li>The average best overall SAT score reported by white respondents was 2218; 2174 for respondents who are Hispanic or Latino; and 2149 for respondents who are black or African American.</li>
+            <li>Respondents who came from households with an income of less than $40,000 a year on average had lower overall best SAT scores—about 2189 on average—than those who came from more affluent backgrounds. Respondents whose parents make $500,000 or more each year reported a best overall SAT score of 2239 on average.</li>
+            <li>Surveyed students from private non-denominational schools reported slightly higher overall SAT scores—2250 on average—than students from public non-charter schools, who on average said they received 2225 on the test.</li>
+            <li>Female respondents reported slightly higher overall SAT scores on average than male respondents— 2235 and about 2225, respectively.</li>
+            <li>Surveyed freshmen who were admitted to the College through its single-choice early action admissions program reported higher SAT scores on average, with an overall score 0f 2239, compared to 2217 for regular admittees.</li>
+        </ul>
+        <p class="scroll-row"><strong>Admissions</strong></p>
+        <p>Fifty-five percent of surveyed freshman reported that they were admitted to Harvard through the College’s single-choice early action program. Many respondents who were admitted early come from families with higher incomes and were more likely to be legacies than their peers who applied regular decision.</p>
+        <p>Respondents who were admitted early, moreover, were more likely to be white, more likely to have attended a private school, and more likely to be from the Northeast. They were less likely than the average survey respondent to be Hispanic or African American, to receive financial aid from the College, or to be the first person in their family to attend college.</p>
+        <ul>
+            <li>Ten percent of respondents who were admitted early report a household income of less than $40,000, compared to 14 percent of all surveyed freshmen.</li>
+            <li>Nineteen percent of early admit respondents have parents with a combined income of $500,000 or more, though students with this level of family income make up only 15 percent of the surveyed Class of 2019 overall.</li>
+            <li>About 22 percent of surveyed early admits had one or more parents who attend Harvard, compared to 16 percent of the surveyed freshman class overall.</li>
+            <li>Sixty-one percent of survey respondents who were admitted early identify as white, 30 percent as Asian or South Asian, 10 percent as Hispanic or Latino, 10 percent as black or African-American, 1 percent as American Indian or Alaskan Native, and 1 percent as Pacific Islander.</li>
+            <li>Sixty percent of respondents admitted early come to Harvard from public high school and 39 percent from private school.</li>
+            <li>Respondents from the Northeastern U.S. make up 44 percent of those who were admitted early and 38 percent of the survey respondents from the surveyed Class of 2019 as a whole.</li>
+            <li>A smaller percentage of surveyed students admitted early reported that they receive financial aid from the College—47 percent—than the percentage of the surveyed freshman class as a whole—about 56 percent.</li>
+            <li>Twelve percent of surveyed freshmen admitted early to Harvard are first-generation college students, compared to 16 percent of respondents overall.</li>
+            <li>Nineteen percent of respondents admitted early reported using a private admissions counselor throughout the application process, while 18 percent of all surveyed freshmen said they did.</li>
+        </ul>
+        <p>&mdash;Staff writer Mariel A. Klein can be reached at mariel.klein@thecrimson.com. Follow her on Twitter <a href="https://twitter.com/mariel_klein">@mariel_klein</a>.</p>
+        <p>&mdash;Staff writer Elizabeth C. Keto can be reached at eketo@college.harvard.edu.</p>
     </div>
 
 {% endblock %}
