@@ -39,6 +39,9 @@ $(document).ready(function() {
         2018: 'data/2018/3/1/politics_raw.csv',
         2019: 'data/2019/3/1/politics_raw.csv'
     }, '#politics');
+    createChart('pie', {
+        2019: 'data/2019/3/2/politics_divestment.csv'
+    }, '#politics-divestment');
     createMultiChart('bar', ['Liberal', 'Moderate', 'Conservative'], null, {
         2017: ['data/2017/3/1/liberal_income.csv', 'data/2017/3/1/moderate_income.csv', 'data/2017/3/1/conservative_income.csv'],
         2018: ['data/2018/3/1/liberal_income.csv', 'data/2018/3/1/moderate_income.csv', 'data/2018/3/1/conservative_income.csv'],
