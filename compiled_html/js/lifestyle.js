@@ -58,7 +58,7 @@ $(document).ready(function() {
         2017: ['data/2017/3/1/liberal_race.csv', 'data/2017/3/1/moderate_race.csv', 'data/2017/3/1/conservative_race.csv'],
         2018: ['data/2018/3/1/liberal_race.csv', 'data/2018/3/1/moderate_race.csv', 'data/2018/3/1/conservative_race.csv'],
         2019: ['data/2019/3/1/liberal_race.csv', 'data/2019/3/1/moderate_race.csv', 'data/2019/3/1/conservative_race.csv']
-    }, '#politics-ethnicity', null, { yAxis: { max: 70 } });
+    }, '#politics-ethnicity', null, { yAxis: { max: 100 } });
 
     // Sex
     createChart('pie', {
@@ -70,6 +70,9 @@ $(document).ready(function() {
         2018: 'data/2018/3/2/sexual_activity_finalclubs.csv',
         2019: 'data/2019/3/2/sexual_activity_finalclubs.csv'
     }, '#sex-final-clubs');
+    createMultiChart('bar', ['Took a gap year', 'Did not take a gap year'], null, {
+        2019: ['data/2019/3/2/sex_gap.csv', 'data/2019/3/2/sex_nongap.csv']
+    }, '#sex-gap');
     createChart('column', {
         2017: 'data/2017/3/2/virginity_loss.csv',
         2018: 'data/2018/3/2/virginity_loss.csv',
@@ -117,7 +120,7 @@ $(document).ready(function() {
         2017: 'data/2017/3/3/other_drugs_raw.csv',
         2018: 'data/2018/3/3/other_drugs_raw.csv',
         2019: 'data/2019/3/3/other_drugs_raw.csv'
-    }, '#drugs-hard', null, { yAxis: { max: 4 } });
+    }, '#drugs-hard', null, { yAxis: { max: 5 } });
     createChart('pie', {
         2017: 'data/2017/3/3/fake_raw.csv',
         2018: 'data/2018/3/3/fake_raw.csv',
@@ -194,12 +197,18 @@ $(document).ready(function() {
         2017: 'data/2017/3/5/facebook_raw.csv',
         2018: 'data/2018/3/5/facebook_raw.csv',
         2019: 'data/2019/3/5/facebook_raw.csv'
-    }, '#facebook', null, { yAxis: { max: 30 } });
+    }, '#facebook', null, { yAxis: { max: 60 } });
     createChart('bar',  {
         2017: 'data/2017/3/5/twitter_raw.csv',
         2018: 'data/2018/3/5/twitter_raw.csv',
         2019: 'data/2019/3/5/twitter_raw.csv'
     }, '#twitter', null, { yAxis: { max: 60 } });
+    createChart('bar',  {
+        2019: 'data/2019/3/5/snapchat_raw.csv'
+    }, '#snapchat', null, { yAxis: { max: 60 } });
+    createChart('bar',  {
+        2019: 'data/2019/3/5/instagram_raw.csv'
+    }, '#instagram', null, { yAxis: { max: 60 } });
 
 
     $(window).trigger('resize');
