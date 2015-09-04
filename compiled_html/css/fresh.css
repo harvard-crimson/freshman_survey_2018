@@ -90,6 +90,9 @@ header h1 {
 	font-family: 'Colaborate Thin', sans-serif;
 	font-size: 35px;
 	font-size: italic;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.1;
 	text-align: center;
 	padding: 20px 0;
 }

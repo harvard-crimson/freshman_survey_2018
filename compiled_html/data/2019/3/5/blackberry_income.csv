@@ -1,6 +1,6 @@
-"Below $40,000",1
-"Between $40,000 and $80,000",1
-"Between $80,000 and $125,000",1
-"Between $125,000 and $250,000",1
-"Between $250,000 and $500,000",1
-"Over $500,000",1
+Below $40,000,0
+Between $40,000 and $80,000,1.48
+Between $80,000 and $125,000,0.62
+Between $125,000 and $250,000,0
+Between $250,000 and $500,000,0
+Over $500,000,0

@@ -16,7 +16,7 @@ $(document).ready(function() {
         2017: ['data/2017/3/0/catholic_race.csv', 'data/2017/3/0/protestant_race.csv', 'data/2017/3/0/jew_race.csv', 'data/2017/3/0/muslim_race.csv', 'data/2017/3/0/buddhist_race.csv', 'data/2017/3/0/hindu_race.csv', 'data/2017/3/0/mormon_race.csv', 'data/2017/3/0/agnostic_race.csv', 'data/2017/3/0/atheist_race.csv', 'data/2017/3/0/other_race.csv'],
         2018: ['data/2018/3/0/catholic_race.csv', 'data/2018/3/0/protestant_race.csv', 'data/2018/3/0/jew_race.csv', 'data/2018/3/0/muslim_race.csv', 'data/2018/3/0/buddhist_race.csv', 'data/2018/3/0/hindu_race.csv', 'data/2018/3/0/mormon_race.csv', 'data/2018/3/0/agnostic_race.csv', 'data/2018/3/0/atheist_race.csv', 'data/2018/3/0/other_race.csv'],
         2019: ['data/2019/3/0/catholic_race.csv', 'data/2019/3/0/protestant_race.csv', 'data/2019/3/0/jew_race.csv', 'data/2019/3/0/muslim_race.csv', 'data/2019/3/0/buddhist_race.csv', 'data/2019/3/0/hindu_race.csv', 'data/2019/3/0/mormon_race.csv', 'data/2019/3/0/agnostic_race.csv', 'data/2019/3/0/atheist_race.csv', 'data/2019/3/0/other_race.csv']
-    }, '#religion-race', null, { yAxis: { max: 35 } });
+    }, '#religion-race', null, { yAxis: { max: 50 } });
     createMultiChart('bar', ['Not at all religious', 'Not very religious', 'Somewhat religious', 'Religious', 'Very religious'], null, {
         2017: ['data/2017/3/0/religiosity_income_0.csv', 'data/2017/3/0/religiosity_income_1.csv', 'data/2017/3/0/religiosity_income_2.csv', 'data/2017/3/0/religiosity_income_3.csv', 'data/2017/3/0/religiosity_income_4.csv'],
         2018: ['data/2018/3/0/religiosity_income_0.csv', 'data/2018/3/0/religiosity_income_1.csv', 'data/2018/3/0/religiosity_income_2.csv', 'data/2018/3/0/religiosity_income_3.csv', 'data/2018/3/0/religiosity_income_4.csv'],
@@ -67,11 +67,6 @@ $(document).ready(function() {
         2019: 'data/2019/3/2/virginity_raw.csv'
     }, '#sex');
     createChart('column', {
-        2017: 'data/2017/3/2/sex_gender.csv',
-        2018: 'data/2018/3/2/sex_gender.csv',
-        2019: 'data/2019/3/2/sex_gender.csv'
-    }, '#sex-gender');
-    createChart('column', {
         2018: 'data/2018/3/2/sexual_activity_finalclubs.csv',
         2019: 'data/2019/3/2/sexual_activity_finalclubs.csv'
     }, '#sex-final-clubs');
@@ -80,16 +75,16 @@ $(document).ready(function() {
         2018: 'data/2018/3/2/virginity_loss.csv',
         2019: 'data/2019/3/2/virginity_loss.csv'
     }, '#sex-age');
+    createChart('column', {
+        2017: 'data/2017/3/2/sex_gender.csv',
+        2018: 'data/2018/3/2/sex_gender.csv',
+        2019: 'data/2019/3/2/sex_gender.csv'
+    }, '#sex-gender');
     createChart('bar', {
         2017: 'data/2017/3/2/sex_partners.csv',
         2018: 'data/2018/3/2/sex_partners.csv',
         2019: 'data/2019/3/2/sex_partners.csv'
     }, '#sex-partners', null, { yAxis: { max: 70 } });
-    createNumericChart('column', {
-        2017: 'data/2017/3/2/partners_gender.csv',
-        2018: 'data/2018/3/2/partners_gender.csv',
-        2019: 'data/2019/3/2/partners_gender.csv'
-    }, '#sex-partners-gender', { yAxis: { max: 2 } });
     createChart('column', {
         2017: 'data/2017/3/2/sex_religion.csv',
         2018: 'data/2018/3/2/sex_religion.csv',
@@ -118,10 +113,6 @@ $(document).ready(function() {
         2018: 'data/2018/3/3/marijuana_raw.csv',
         2019: 'data/2019/3/3/marijuana_raw.csv'
     }, '#drugs-weed');
-    createChart('column', {
-        2018: 'data/2018/3/3/marijuana_legalization_by_use.csv',
-        2019: 'data/2019/3/3/marijuana_legalization_by_use.csv'
-    }, '#drugs-weed-legal');
     createChart('column', {
         2017: 'data/2017/3/3/other_drugs_raw.csv',
         2018: 'data/2018/3/3/other_drugs_raw.csv',

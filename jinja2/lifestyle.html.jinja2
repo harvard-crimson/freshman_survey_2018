@@ -27,7 +27,13 @@
 {% block content %}
     <div class="intro scroll-row">
         <div id="subhead">Beliefs and Lifestyle</div>
-        <p>[[Summary goes here]]</p>
+        <p id="byline">
+            <i>By</i>
+            <a href="http://www.thecrimson.com/writer/1209849/David__Freed/">David Freed</a>
+            and
+            <a href="www.thecrimson.com/writer/1209871/Idrees_M._Kahloon/">Idrees Kahloon</a>
+        </p>
+        <p>Part III of The Crimson’s survey of the Class of 2019 looks at the beliefs and lifestyles of the incoming freshmen. Almost two-thirds of the surveyed students are virgins, but respondents who took a gap year between high school and college were more likely to report having had sexual intercourse before arriving in Cambridge. Most have minimal experience with drugs and alcohol. A majority identify politically as at least somewhat liberal, but a plurality—45 percent—reported feeling unsure about whether their new school should divest its endowment from the fossil fuel industry, a raging debate on campus. Forty-one percent said they are “not confident at all” that the police treat white people and black people equally.</p>
         <p>Read Part III of The Crimson's three-part series on the freshman survey <a href="lifestyle-narrative/">here</a>.</p>
 
     </div>
@@ -292,85 +298,85 @@
 
                         <div id="northeast2019" class="region">
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">67.76%</div>
                                 of those from the Northeast identify as liberal.
                             </h3>
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">20.19%</div>
                                 of those from the Northeast consider themselves moderates.
                             </h3>
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">12.06%</div>
                                 of those from the Northeast identify as conservative.
                             </h3>
                         </div>
                         <div id="southeast2019" class="region">
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">56.11%</div>
                                 of those from the Southeast identify as liberal.
                             </h3>
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">25.9%</div>
                                 of those from the Southeast consider themselves moderates.
                             </h3>
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">17.98%</div>
                                 of those from the Southeast identify as conservative.
                             </h3>
                         </div>
                         <div id="midwest2019" class="region">
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">62.8%</div>
                                 of those from the Midwest identify as liberal.
                             </h3>
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">21.9%</div>
                                 of those from the Midwest consider themselves moderates.
                             </h3>
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">15.3%</div>
                                 of those from the Midwest identify as conservative.
                             </h3>
                         </div>
                         <div id="southwest2019" class="region">
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">61.3%</div>
                                 of those from the Southwest identify as liberal.
                             </h3>
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">28.7%</div>
                                 of those from the Southwest consider themselves moderates.
                             </h3>
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">10.0%</div>
                                 of those from the Southwest identify as conservative.
                             </h3>
                         </div>
                         <div id="west2019" class="region">
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">66.6%</div>
                                 of those from the West identify as liberal.
                             </h3>
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">21.2%</div>
                                 of those from the West consider themselves moderates.
                             </h3>
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">12.3%</div>
                                 of those from the West identify as conservative.
                             </h3>
                         </div>
                         <div id="outside2019" class="region">
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">68.3%</div>
                                 of those from outside the United States identify as liberal.
                             </h3>
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">26.2%</div>
                                 of those from outside the United States consider themselves moderates.
                             </h3>
                             <h3>
-                                <div class="region-stat">[data]%</div>
+                                <div class="region-stat">5.6%</div>
                                 of those from outside the United States identify as conservative.
                             </h3>
                         </div>
@@ -427,9 +433,6 @@
                 <a href="#sex-religion-tab" data-toggle="tab">Sexual Activity by Religion</a>
             </li>
             <li>
-                <a href="#sex-partners-gender-tab" data-toggle="tab">Sexual Partners by Gender</a>
-            </li>
-            <li>
                 <a href="#sex-partners-athletes-tab" data-toggle="tab">Sexual Activity by Recruitment Status</a>
             </li>
             <li>
@@ -467,11 +470,6 @@
                 <div id="sex-religion" class="graph"></div>
                 <p></p>
             </li>
-            <li id="sex-partners-gender-tab">
-                <h2>Sexual Partners by Gender</h2>
-                <div id="sex-partners-gender" class="graph"></div>
-                <p></p>
-            </li>
             <li id="sex-partners-athletes-tab">
                 <h2>Sexual Activity by Recruitment Status</h2>
                 <div id="sex-partners-athletes" class="graph"></div>
@@ -499,9 +497,6 @@
             </li>
             <li>
                 <a href="#drugs-weed-tab" data-toggle="tab">Marijuana Users</a>
-            </li>
-            <li>
-                <a href="#drugs-weed-legal-tab" data-toggle="tab">Support for Marijuana Legalization by Use</a>
             </li>
             <li>
                 <a href="#drugs-hard-tab" data-toggle="tab">Hard Drug Users</a>
@@ -534,11 +529,6 @@
             <li id="drugs-weed-tab">
                 <h2>Marijuana Users</h2>
                 <div id="drugs-weed" class="graph"></div>
-                <p></p>
-            </li>
-            <li id="drugs-weed-legal-tab">
-                <h2>Support for Marijuana Legalization by Use</h2>
-                <div id="drugs-weed-legal" class="graph"></div>
                 <p></p>
             </li>
             <li id="drugs-hard-tab">
